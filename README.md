@@ -1,7 +1,7 @@
-# Exercise of the week 2
+# 2nd week Exercise
 
-## Little description:
-For this week, they teachers asked us to make a simple HTMLdoc replicanding the landing page confected the last week.
+## Brief description:
+For this task, teachers asked us to make a HTMLdoc that replicates the landing page that we made last week. Jps images and icons that were created in Figma and implemented last week can be used for this exercise.
 
 ## Steps for running the HTMLdoc:
 
@@ -17,5 +17,5 @@ For this week, they teachers asked us to make a simple HTMLdoc replicanding the 
 5- Open "index.html". 
 ```
 
-## Full name of the student
+## Student full name
 Luciano Claros, Baltazar's team.

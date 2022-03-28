@@ -6,7 +6,7 @@ For this task, teachers asked us to make a HTMLdoc that replicates the landing p
 ## Steps for running the HTMLdoc:
 
 ```
-1- Copy this link in your browser: (add later).
+1- Copy this link in your browser: https://github.com/Clarosluciano/BaSP-M2022-Etapa-1
 
 2- Click on the green "Code" button.
 

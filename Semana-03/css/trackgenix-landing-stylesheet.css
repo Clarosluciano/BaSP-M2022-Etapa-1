@@ -2,11 +2,19 @@ body{
     margin: 0px;
 }
 
+main{
+    position: relative;
+    top: 41px;
+    left: 200px;
+    right: 0px;
+    bottom: 74px;
+}
+
 #fix-header{
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 91px;
+    height: 61px;
     background-color: #373867;
 }
 
@@ -14,15 +22,30 @@ body{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 104px;
+    height: 74px;
     background-color: #373867;
 }
 
 #fix-aside{
     position: fixed;
-    top: 90px;
+    top: 61px;
     left: 0px;
-    width: 300px;
+    width: 200px;
     height: 832px;
     background-color: #AACE9B;
 }
+
+.homepage{
+    
+    margin: 0%;
+    top: 61px;
+    left: 200px;
+    right: 0px;
+    bottom: 74px;
+    background-image: url(../img/landing.jpg);
+}
+
+.homepage h1{
+    text-align: center;
+}
+

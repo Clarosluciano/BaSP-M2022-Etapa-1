@@ -1,13 +1,29 @@
 body{
     margin: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #373867;
 }
 
 main{
     position: relative;
-    top: 41px;
+    top: 61px;
     left: 200px;
     right: 0px;
     bottom: 74px;
+    width: 1104px;
+    height: 100%;
+}
+
+.rectangle{
+    margin: 0px;
+    width: 1104px;
+    height: 60px;
+    left: 300px;
+    background-color: #49A37B;
 }
 
 #fix-header{
@@ -17,6 +33,7 @@ main{
     height: 61px;
     background-color: #373867;
 }
+
 
 #fix-footer{
     position: fixed;
@@ -31,21 +48,264 @@ main{
     top: 61px;
     left: 0px;
     width: 200px;
-    height: 832px;
+    height: 600px;
     background-color: #AACE9B;
 }
 
-.homepage{
+.container{
+    position: relative;
+    width: 1104px;
+    height: 768px;
     
-    margin: 0%;
+}
+
+.homepage{
+    margin: 0px;
     top: 61px;
     left: 200px;
-    right: 0px;
     bottom: 74px;
+    width: 1104px;
+    height: 768px;
     background-image: url(../img/landing.jpg);
 }
 
 .homepage h1{
+    margin: 0px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+}
+
+.homepage figure{
+    width: 448px;
+    height: 472px;
+    margin: auto
+}
+
+.im-trackgenix{
+    float: left;
+    width: 34%;
+    margin: 80px;
+    margin-right: 90px;
+}
+
+.im-trackgenix h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
     text-align: center;
 }
 
+.im-trackgenix h3{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.im-trackgenix p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.im-trackgenix img{
+    margin-top: 90px;
+}
+
+.title-of-what-and-why h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    position: absolute;
+    left: 250px;
+}
+
+.desicion-making{
+    float: left;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    position: absolute;
+    top: 130px;
+    bottom: 60px;
+    left: 50px;
+    right: 50px;
+}
+
+.desicion-making h3{
+    position: absolute;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    left: 99px;
+    bottom: 115px;
+}
+
+.desicion-making p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 30px;
+}
+
+.resourse-management{
+    float: left;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    position: absolute;
+    top: 130px;
+    bottom: 60px;
+    left: 550px;
+    right: 100px;
+}
+
+.resourse-management h3{
+    position: absolute;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    left: 99px;
+    bottom: 115px;
+}
+
+.resourse-management p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 30px;
+}
+
+.reports-and-traceability{
+    float: left;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    position: absolute;
+    top: 330px;
+    bottom: 60px;
+    left: 50px;
+    right: 50px;
+}
+
+.reports-and-traceability h3{
+    position: absolute;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    left: 99px;
+    bottom: 115px;
+}
+
+.reports-and-traceability p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 30px; 
+}
+
+.leadership{
+    float: left;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    position: absolute;
+    top: 330px;
+    bottom: 60px;
+    left: 550px;
+    right: 100px;
+}
+
+.leadership h3{
+    position: absolute;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    left: 99px;
+    bottom: 115px;
+}
+
+.leadership p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 30px;
+}
+
+.productivity-booster{
+    float: left;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    position: absolute;
+    top: 530px;
+    bottom: 60px;
+    left: 50px;
+    right: 50px;
+}
+
+.productivity-booster h3{
+    position: absolute;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    left: 99px;
+    bottom: 115px;
+}
+
+.productivity-booster p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 30px; 
+}
+
+.hours-log{
+    float: left;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    position: absolute;
+    top: 530px;
+    bottom: 60px;
+    left: 550px;
+    right: 100px;
+}
+
+.hours-log h3{
+    position: absolute;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    left: 99px;
+    bottom: 115px;
+}
+
+.hours-log p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 30px;
+}

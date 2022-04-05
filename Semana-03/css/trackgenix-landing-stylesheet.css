@@ -1,8 +1,8 @@
 body{
+    position: relative;
     margin: 0px;
     width: 100%;
     height: 100%;
-    position: relative;
     font-family: 'Roboto';
     font-style: normal;
     color: #373867;
@@ -15,15 +15,6 @@ main{
     right: 0px;
     bottom: 74px;
     width: 1104px;
-    height: 100%;
-}
-
-.rectangle{
-    margin: 0px;
-    width: 1104px;
-    height: 60px;
-    left: 300px;
-    background-color: #49A37B;
 }
 
 #fix-header{
@@ -32,6 +23,29 @@ main{
     width: 100%;
     height: 61px;
     background-color: #373867;
+    z-index: 1;
+}
+
+#fix-header img{
+    position: relative;
+    left: 635px;
+}
+
+#fix-header button{
+    position: relative;
+    width: 65px;
+    height: 34px;
+    left: 1170px;
+    bottom: 30px;
+    background: #AACE9B;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #373867;
 }
 
 
@@ -39,8 +53,29 @@ main{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 74px;
+    height: 84px;
     background-color: #373867;
+    z-index: 1;
+}
+
+#fix-footer img{
+    position: relative;
+    top: 5px;
+    left: 545px;
+}
+
+#fix-footer p{
+    position: relative;
+    height: 16px;
+    top: 3px;
+    margin: 2px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    color: #AACE9B;
 }
 
 #fix-aside{
@@ -48,8 +83,58 @@ main{
     top: 61px;
     left: 0px;
     width: 200px;
-    height: 600px;
+    height: 525px;
     background-color: #AACE9B;
+}
+
+#fix-aside p{
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    left: 25px;
+}
+
+#fix-aside ul{
+    position: relative;
+    list-style: none;
+    margin: 5px;
+    padding-left: 5px;
+}
+#fix-aside li{
+    margin: 15px;
+}
+
+#fix-aside a{
+    margin-left: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    text-decoration: none;
+    color: #373867;
+}
+
+#fix-aside .button{
+    position: relative;
+    width: 150px;
+    height: 26px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 0px #373867;
+}
+
+#fix-aside .button:hover{
+    background: #49A37B;
+    color: #373867;
+}
+
+.rectangle{
+    margin: 0px;
+    width: 1104px;
+    height: 60px;
+    left: 300px;
+    background-color: #49A37B;
 }
 
 .container{
@@ -117,19 +202,19 @@ main{
 }
 
 .title-of-what-and-why h2{
+    position: absolute;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
-    position: absolute;
     left: 250px;
 }
 
 .desicion-making{
+    position: absolute;
     float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
-    position: absolute;
     top: 130px;
     bottom: 60px;
     left: 50px;
@@ -156,11 +241,11 @@ main{
 }
 
 .resourse-management{
+    position: absolute;
     float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
-    position: absolute;
     top: 130px;
     bottom: 60px;
     left: 550px;
@@ -187,11 +272,11 @@ main{
 }
 
 .reports-and-traceability{
+    position: absolute;
     float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
-    position: absolute;
     top: 330px;
     bottom: 60px;
     left: 50px;
@@ -218,11 +303,11 @@ main{
 }
 
 .leadership{
+    position: absolute;
     float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
-    position: absolute;
     top: 330px;
     bottom: 60px;
     left: 550px;
@@ -249,11 +334,11 @@ main{
 }
 
 .productivity-booster{
+    position: absolute;
     float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
-    position: absolute;
     top: 530px;
     bottom: 60px;
     left: 50px;
@@ -280,11 +365,11 @@ main{
 }
 
 .hours-log{
+    position: absolute;
     float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
-    position: absolute;
     top: 530px;
     bottom: 60px;
     left: 550px;
@@ -308,4 +393,315 @@ main{
     width: 70%;
     left: 99px;
     bottom: 30px;
+}
+
+.title-about-us h2{
+    position: absolute;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    left: 485px;
+}
+
+.about-us-1{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    top: 130px;
+    left: 100px;
+}
+
+.about-us-1 p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 50%;
+}
+.about-us-1 img{
+    float: right;
+}
+
+.about-us-2{
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    top: 430px;
+    left: 100px;
+}
+
+.about-us-2 p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 50%;
+    left: 500px;
+    text-align: right;
+}
+
+.title-contac-us h2{
+    position: absolute;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    left: 485px;
+}
+
+.contac-us-form{
+    position: absolute;
+    width: 50%;
+    left: 80px;
+    top: 130px
+}
+
+.user{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 0px;
+}
+
+.user label{
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+
+.user input{
+    position: absolute;
+    height: 37px;
+    left: 0%;
+    right: 0%;
+    top: 23px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.mail{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 100px;
+}
+
+.mail label{
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+
+.mail input{
+    position: absolute;
+    height: 37px;
+    left: 0%;
+    right: 0%;
+    top: 23px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.area{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 200px;
+}
+
+.area label{
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+
+.area select{
+    position: absolute;
+    height: 37px;
+    left: 0%;
+    right: 0%;
+    top: 23px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.phonenumber{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 300px;
+}
+
+.phonenumber label{
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+
+.phonenumber input{
+    position: absolute;
+    height: 37px;
+    left: 0%;
+    right: 0%;
+    top: 23px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.message{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 400px;
+}
+
+.message label{
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+}
+
+.message textarea{
+    position: absolute;
+    height: 100px;
+    left: 0%;
+    right: 0%;
+    top: 23px;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.submit-button{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 550px;
+}
+
+.submit-button input{
+    position: static;
+    width: 331px;
+    height: 34px;
+    left: 0px;
+    top: 528px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    color: #373867;
+    background: #AACE9B;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+.contac-us-info{
+    position: absolute;
+    width: 50%;
+    left: 550px;
+    top: 130px;
+}
+
+.house{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 50px;
+}
+
+.house p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 80%;
+    left: 99px;
+    bottom: 65px;
+}
+
+.phone{
+    position: absolute;
+    width: 40%;
+    height: 168px;
+    margin: 20px;
+    top: 250px;
+}
+
+.phone p{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 70%;
+    left: 99px;
+    bottom: 65px;
+}
+
+.letter{
+    position: absolute;
+    width: 60%;
+    height: 168px;
+    margin: 20px;
+    top: 450px;
+}
+
+.letter address{
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    width: 80%;
+    left: 99px;
+    bottom: 90px;
+}
+
+.parting-line{
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    left: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.mini-container{
+    width: 1104px;
+    height: 280px;
+}
+.products{
+    position: absolute;
+    width: 20%;
+    left: 200px;
+}
+
+.business{
+    position: absolute;
+    width: 20%;
+    left: 500px;
+}
+
+.support{
+    position: absolute;
+    width: 20%;
+    left: 800px;
 }

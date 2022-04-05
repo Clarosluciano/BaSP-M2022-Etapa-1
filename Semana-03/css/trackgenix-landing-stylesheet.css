@@ -141,7 +141,6 @@ main{
     position: relative;
     width: 1104px;
     height: 768px;
-    
 }
 
 .homepage{
@@ -156,10 +155,10 @@ main{
 
 .homepage h1{
     margin: 0px;
-    text-align: center;
     font-weight: 800;
     font-size: 40px;
     line-height: 47px;
+    text-align: center;
     color: #FFFFFF;
 }
 
@@ -202,16 +201,15 @@ main{
 }
 
 .title-of-what-and-why h2{
-    position: absolute;
+    position: relative;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
-    left: 250px;
+    text-align: center;
 }
 
 .desicion-making{
     position: absolute;
-    float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
@@ -242,7 +240,6 @@ main{
 
 .resourse-management{
     position: absolute;
-    float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
@@ -273,7 +270,6 @@ main{
 
 .reports-and-traceability{
     position: absolute;
-    float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
@@ -304,7 +300,6 @@ main{
 
 .leadership{
     position: absolute;
-    float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
@@ -335,7 +330,6 @@ main{
 
 .productivity-booster{
     position: absolute;
-    float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
@@ -366,7 +360,6 @@ main{
 
 .hours-log{
     position: absolute;
-    float: left;
     width: 40%;
     height: 168px;
     margin: 20px;
@@ -396,11 +389,11 @@ main{
 }
 
 .title-about-us h2{
-    position: absolute;
+    position: relative;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
-    left: 485px;
+    text-align: center;
 }
 
 .about-us-1{
@@ -688,6 +681,12 @@ main{
     width: 1104px;
     height: 280px;
 }
+
+.mini-container ol{
+    margin-left: 0px;
+    padding-left: 15px;
+}
+
 .products{
     position: absolute;
     width: 20%;

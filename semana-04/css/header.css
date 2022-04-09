@@ -22,6 +22,7 @@
 #fix-header .header-items:nth-child(2){
     width: 45px;
     height: 45px;
+    margin-left: 45px;
 }
 
 #fix-header .header-items:nth-child(3){

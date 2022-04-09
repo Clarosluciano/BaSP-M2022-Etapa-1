@@ -1,0 +1,65 @@
+#homepage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/landing.jpg);
+}
+
+#homepage h1{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#homepage img{
+    width: 350px;
+    height: 350px;
+}
+
+#what-is-trackgenix{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#what-is-trackgenix h2{
+    margin-left: 25px;
+    margin-right: 25px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    text-align: center;
+}
+
+#what-is-trackgenix h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+}
+
+#what-is-trackgenix p{
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+}
+
+#what-is-trackgenix img{
+    width: 200px;
+    height: 290px;
+}

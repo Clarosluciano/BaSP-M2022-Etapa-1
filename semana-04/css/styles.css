@@ -12,9 +12,24 @@ body{
     color: #373867;
 }
 
+.rectangle{
+    margin: 0px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    background-color: #49A37B;
+}
+
 .flex-container{
     width: 100%;
-    height: 500px;
+    height: 750px;
+    display: flex;
+    margin: auto;
+}
+
+.mini-container{
+    width: 100%;
+    height: 200px;
     display: flex;
     margin: auto;
 }

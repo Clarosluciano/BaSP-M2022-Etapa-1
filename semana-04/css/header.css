@@ -24,39 +24,3 @@
     height: 45px;
     margin-left: 45px;
 }
-
-#fix-header .header-items:nth-child(3){
-    width: 65px;
-    height: 34px;
-    margin-right: 10px;
-    justify-content: center;
-    align-items: center;
-    background: #AACE9B;
-    border-radius: 5px;
-    border-width: 0px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: #373867;
-}
-
-/*#fix-header img{
-    width: 50px;
-    height: 50px;
-}
-
-#fix-header button{
-    width: 65px;
-    height: 34px;
-    background: #AACE9B;
-    border-radius: 5px;
-    border-width: 0px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: #373867;
-}

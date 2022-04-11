@@ -20,16 +20,55 @@ body{
     background-color: #49A37B;
 }
 
+.trackgenix-style-button{
+    width: 65px;
+    height: 34px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    background: #AACE9B;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #373867;
+}
+
 .flex-container{
     width: 100%;
-    height: 750px;
+    height: 1000px;
     display: flex;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes{
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .mini-container{
     width: 100%;
-    height: 200px;
+    height: 150px;
     display: flex;
-    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.mini-boxes{
+    width: 33%;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

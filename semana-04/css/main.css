@@ -1,6 +1,6 @@
-#homepage{
+.homepage{
     width: 100%;
-    height: 100%;
+    height: 768px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,7 @@
     background-image: url(../img/landing.jpg);
 }
 
-#homepage h1{
+.homepage h1{
     font-weight: 800;
     font-size: 40px;
     line-height: 47px;
@@ -16,82 +16,59 @@
     color: #FFFFFF;
 }
 
-#homepage img{
-    width: 350px;
+.homepage img{
+    width: 300px;
+    height: 300px;
+}
+
+.what-is-trackgenix{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.what-is-trackgenix h3{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.what-is-trackgenix p{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0px;
+    text-align: center;
+}
+
+.what-is-trackgenix img{
+    width: 250px;
     height: 350px;
 }
 
-#what-is-trackgenix{
+.why-choose-trackgenix{
     width: 100%;
-    height: 100%;
+    height: 1000px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-#what-is-trackgenix h2{
-    margin-left: 40px;
-    margin-right: 40px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 47px;
-    text-align: center;
-}
-
-#what-is-trackgenix h3{
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 5px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 35px;
-    text-align: center;
-}
-
-#what-is-trackgenix p{
-    margin-left: 90px;
-    margin-right: 90px;
-    padding: 0px;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 23px;
-    text-align: center;
-}
-
-#what-is-trackgenix img{
-    width: 250px;
-    height: 350px;
-}
-
-#why-choose-trackgenix{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    
-}
-
 .why-choose-children{
     width: 100%;
     height: 85px;
     display: flex;
-    
-}
-
-.why-choose-title h2{
-    margin-left: 35px;
-    margin-right: 35px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 47px;
-    text-align: center;
+    justify-content: center;
 }
 
 .why-choose-children img{
-    margin-left: 10px;
     width: 80px;
     height: 80px;
+    margin-left: 10px;
 }
 
 .why-choose-text{
@@ -99,7 +76,6 @@
     margin-right: 10px;
     display: flex;
     flex-direction: column;
-    
 }
 
 .why-choose-text h3{
@@ -110,63 +86,43 @@
 }
 
 .why-choose-text p{
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 23px;
     text-align: left;
 }
 
-#about-us{
+.about-us{
     width: 100%;
-    height: 100%;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.about-us-children p{
+.about-us .boxes p{
     margin-left: 15px;
     margin-right: 15px;
-    padding: 10px;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 23px;
+    padding: 5px;
     text-align: center;   
 }
 
-.about-us-children img{
-    width: 370px;
-    height: 215px;
+.about-us .boxes img{
+    width: 280px;
+    height: 200px;
 }
 
-.about-us-children h2{
-    margin-left: 35px;
-    margin-right: 35px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 47px;
-    text-align: center;
-}
-
-#get-in-touch{
+.get-in-touch{
     width: 100%;
-    height: 100%;
+    height: 1000px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-#get-in-touch .boxes .trackgenix-style-button{
+.get-in-touch .boxes .trackgenix-style-button{
     width: 260px;
     height: 34px;
-}
-
-.get-in-title h2{
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 47px;
+    margin: 0;
 }
 
 .form-children{
@@ -211,19 +167,18 @@
     align-items: center;
 }
 
-.contac-us .contac-us-text{
-    margin-left: 20px;
-    margin-right: 20px;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 23px;
-    text-align: left;
+.contac-us img{
+    width: 60px;
+    height: 60px;
 }
 
-.mini-boxes h3{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 35px;
+.contac-us .contac-us-text{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 23px;
+    text-align: left;
 }
 
 .mini-boxes ol{
@@ -235,4 +190,95 @@
     font-size: 15px;
     line-height: 20px;
     text-decoration: none;
+}
+
+@media only screen and (min-width: 480px) {
+    /* For tablets */
+
+    .section-content{
+        height: 90%;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .boxes{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .about-us .section-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-us .section-content .boxes{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* for desktop */
+
+    body{
+        font-size: 15px;
+    }
+
+    main{
+        margin-left: 200px;
+    }
+
+    .fix-header .header-items:nth-child(1){
+        visibility: hidden;
+    }
+
+    .fix-aside{
+        display: block;
+    }
+
+    .section-title h2{
+        height: 10%;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 47px;
+        text-align: center;
+    }
+    
+    .caption{
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /*for desktop */
+
+    body{
+        font-size: 21px;
+    }
+
+    .section-title h2{
+        height: 10%;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-weight: 700;
+        font-size: 39px;
+        line-height: 47px;
+        text-align: center;
+    }
+    
+    .caption{
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 35px;
+    }
 }

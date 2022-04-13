@@ -11,7 +11,18 @@ For this task, teachers asked us to make a HTMLdoc that replicates the landing p
 ## Brief description:
 For this task, teachers asked us to make a CSSdoc that contains the styles used in the screenflow developed in Figma during the first week. This CSSdoc must be anchored in the HTMLdoc that was made in the last week.
 
-## Steps for running the HTMLdoc:
+# 4th week Exercise
+
+## Brief description:
+This time, teachers asked us to make a fully responsive landing page for different viewports (mobile, tablet and desktop). Flexbox property and media queries were the new features that had to be used this week.
+
+## Steps for visualize the landing page:
+
+```
+1- Copy this link in your browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-04/
+```
+
+Or:
 
 ```
 1- Copy this link in your browser: https://github.com/Clarosluciano/BaSP-M2022-Etapa-1
@@ -22,7 +33,7 @@ For this task, teachers asked us to make a CSSdoc that contains the styles used 
 
 4- Open it and extract the files.
 
-5- Open "index.html". 
+5- Open "semana-04/index.html". 
 ```
 
 ## Student full name

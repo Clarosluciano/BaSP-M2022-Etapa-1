@@ -14,14 +14,6 @@ body{
     color: #373867;
 }
 
-.rectangle{
-    margin: 0px;
-    width: 100%;
-    height: 35px;
-    display: flex;
-    background-color: #49A37B;
-}
-
 .trackgenix-style-button{
     width: 65px;
     height: 34px;
@@ -41,6 +33,7 @@ body{
 
 .section-title h2{
     height: 10%;
+    margin-top: 15px;
     margin-left: 40px;
     margin-right: 40px;
     font-weight: 700;
@@ -64,7 +57,7 @@ body{
     height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 

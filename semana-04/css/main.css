@@ -23,15 +23,16 @@
 
 .what-is-trackgenix{
     width: 100%;
-    height: 1000px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border-top: 35px solid #49A37B;
 }
 
 .what-is-trackgenix h3{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 15px;
     padding: 5px;
     text-align: center;
 }
@@ -39,28 +40,30 @@
 .what-is-trackgenix p{
     margin-left: 30px;
     margin-right: 30px;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
 }
 
-.what-is-trackgenix img{
+.what-is-trackgenix .boxes img{
+    margin-top: 30px;
     width: 250px;
     height: 350px;
 }
 
 .why-choose-trackgenix{
     width: 100%;
-    height: 1000px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-top: 35px solid #49A37B;
 }
 
 .why-choose-children{
     width: 100%;
     height: 85px;
+    margin: 30px;
     display: flex;
     justify-content: center;
 }
@@ -91,11 +94,16 @@
 
 .about-us{
     width: 100%;
-    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-top: 35px solid #49A37B;
+}
+
+.about-us .boxes{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .about-us .boxes p{
@@ -112,20 +120,23 @@
 
 .get-in-touch{
     width: 100%;
-    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-top: 35px solid #49A37B;
 }
 
 .get-in-touch .boxes .trackgenix-style-button{
     width: 260px;
     height: 34px;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .form-children{
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,25 +148,35 @@
     line-height: 16px;
 }
 
+::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+    opacity: 0.5;
+}
+
 .form-children input{
-    width: 275px;
-    height: 37px;
+    width: 55vw;
+    height: 5vh;
     border: 1px solid #373867;
     box-sizing: border-box;
     border-radius: 4px;
 }
 
 .form-children select{
-    width: 275px;
-    height: 37px;
+    width: 55vw;
+    height: 5vh;
     border: 1px solid #373867;
     box-sizing: border-box;
     border-radius: 4px;
 }
 
 .form-children textarea{
-    width: 275px;
-    height: 100px;
+    width: 55vw;
+    height: 12vh;
     border: 1px solid #373867;
     box-sizing: border-box;
     border-radius: 10px;
@@ -163,6 +184,8 @@
 
 .contac-us{
     margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
@@ -221,6 +244,26 @@
         display: flex;
         flex-direction: row;
     }
+
+    .form-children input{
+        width: 33vw;
+        height: 5vh;
+    }
+    
+    .form-children select{
+        width: 33vw;
+        height: 5vh;
+    }
+    
+    .form-children textarea{
+        width: 36vw;
+        height: 12vh;
+    }
+
+    .get-in-touch .boxes .trackgenix-style-button{
+        width: 33vw;
+        height: 5vh;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -242,6 +285,11 @@
         display: block;
     }
 
+    .footer{
+        position: fixed;
+        bottom: 0px;
+    }
+
     .section-title h2{
         height: 10%;
         margin-left: 40px;
@@ -256,6 +304,32 @@
         font-weight: 700;
         font-size: 23px;
         line-height: 35px;
+    }
+
+    .form-children input{
+        width: 28vw;
+        height: 5vh;
+    }
+    
+    .form-children select{
+        width: 28vw;
+        height: 5vh;
+    }
+    
+    .form-children textarea{
+        width: 31vw;
+        height: 12vh;
+    }
+
+    .contac-us .contac-us-text{
+        font-size: 15px;
+    }
+
+    .mini-container{
+        height: 250px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
     }
 }
 
@@ -280,5 +354,9 @@
         font-weight: 700;
         font-size: 29px;
         line-height: 35px;
+    }
+
+    .contac-us .contac-us-text{
+        font-size: 18px;
     }
 }

@@ -101,19 +101,28 @@
     border-top: 35px solid #49A37B;
 }
 
-.about-us .boxes{
+[class*="about-us-boxes-"]{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="about-us-boxes-"]{
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.about-us .boxes p{
+[class*="about-us-boxes-"] p{
     margin-left: 15px;
     margin-right: 15px;
     padding: 5px;
     text-align: center;   
 }
 
-.about-us .boxes img{
+[class*="about-us-boxes-"] img{
     width: 280px;
     height: 200px;
 }
@@ -238,11 +247,24 @@
         flex-direction: column;
     }
 
-    .about-us .section-content .boxes{
+    [class*="about-us-boxes-"]{
         width: 100%;
         height: 50%;
         display: flex;
         flex-direction: row;
+    }
+
+    .about-us-boxes-1 p{
+        text-align: left;
+    }
+
+    .about-us-boxes-2 img{
+        order: 1;
+    }
+
+    .about-us-boxes-2 p{
+        text-align: right;
+        order: 2;
     }
 
     .form-children input{

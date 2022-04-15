@@ -16,6 +16,11 @@ For this task, teachers asked us to make a CSSdoc that contains the styles used 
 ## Brief description:
 This time, teachers asked us to make a fully responsive landing page for different viewports (mobile, tablet and desktop). Flexbox property and media queries were the new features that had to be used this week.
 
+# 5th week Exercise
+
+## Brief description:
+For this task, teachers asked us to make six JSdocs for practice JavaScript, the new programming language learned this week. The first part of the task consist in practice what was explained in class. The second part consist in devolop a JSdoc that gives functionality to the landing page made on last weeks.
+
 ## Steps for visualize the landing page:
 
 ```

@@ -19,7 +19,7 @@ This time, teachers asked us to make a fully responsive landing page for differe
 # 5th week Exercise
 
 ## Brief description:
-For this task, teachers asked us to make six JSdocs for practice JavaScript, the new programming language learned this week. The first part of the task consist in practice what was explained in class. The second part consist in devolop a JSdoc that gives functionality to the landing page made on last weeks.
+For this task, teachers asked us to make six JSdocs to practice JavaScript, which is the new programming language we learned about this week. The first part of the task consists in putting in to practise what was explained in class. The second part consists in devoloping a JSdoc that adds functionality to the landing page that was made in the past weeks.
 
 ## Steps for visualize the landing page:
 

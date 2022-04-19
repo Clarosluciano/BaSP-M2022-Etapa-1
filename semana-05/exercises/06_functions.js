@@ -5,29 +5,35 @@ console.log('EXERCISE 6: FUNCTIONS');
 resultado en una variable, mostrando el valor de dicha variable en la consola del navegador.*/
 
 console.log('Exercise 6.a:');
-function sum(numberRound1, numberRound2) {
-    var number1 = prompt('Enter the number you want to sum up:');
-    var number2 = prompt('Enter the number you want to sum up:');
-    number1 = Number(number1);
-    number2 = Number(number2);
+var number1 = prompt('Enter the number you want to sum up:');
+var number2 = prompt('Enter the number you want to sum up:');
+number1 = Number(number1);
+number2 = Number(number2);
+function userController(aNumber){
+    if (aNumber % 1 === 0) {
+        aNumberRound = aNumber
+    }else{
+        aNumberRound = Math.round(aNumber);
+        alert('Only whole numbers can be entered');
+    }
+    return aNumberRound
+}
+function sum(number1, number2) {
     var total = number1 + number2;
     total = Number(total);
     if(total !== Number(total)) {
         alert('Enter a valid numeric value.');
-        return alert('The total is: ' + total);
+        sumTotal = userController(total);
+        alert('The total is: ' + sumTotal);
     }else{
-        if (total % 1 == 0) {
-            return alert('The total is: ' + total);
-        }else{
-            totalRound = Math.round(total);
-            alert('Only whole numbers can be entered');
-            return alert('The total is: ' + totalRound);
-        }
+        sumTotal = userController(total);
+        alert('The total is: ' + sumTotal);
     }
+    return sumTotal;
     /*var total = number1 + number2;
     return total;*/
 }
-sum()
+var mathOperation = sum(number1, number2);
 //console.log(sum(8, 10));//
 console.log('Done.');
 
@@ -72,13 +78,13 @@ console.log('Done.');
 que todo siga funcionando igual.*/
 
 console.log('Exercise 6.e:');
-/*function userController(sum){
-    var numControlled = sum(numberRound1, numberRound2);
-    if (numControlled % 1 == 0) {
-        return alert('The total is: ' + total);
+/*function userController(aNumber){
+    if (aNumber % 1 === 0) {
+        aNumberRound = aNumber
     }else{
+        aNumberRound = Math.round(aNumber);
         alert('Only whole numbers can be entered');
-        return alert('The total is: ' + total);
     }
+    return aNumberRound
 }*/
 console.log('Done.');

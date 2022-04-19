@@ -22,7 +22,7 @@ console.log('Done.');
 7- “Anciano” si es mayor a 75 años.*/
 
 console.log('Exercise 4.b:');
-var age = prompt('Ingrese su edad:');
+var age = prompt('Enter your age:');
 age = parseInt(age);
 if (age <= 2) {
     alert('You are a baby');

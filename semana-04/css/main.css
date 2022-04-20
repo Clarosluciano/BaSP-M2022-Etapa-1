@@ -62,16 +62,15 @@
 
 .why-choose-children{
     width: 100%;
-    height: 85px;
-    margin: 30px;
+    margin: 40px;
     display: flex;
     justify-content: center;
 }
 
 .why-choose-children img{
-    width: 80px;
-    height: 80px;
-    margin-left: 10px;
+    width: 20%;
+    height: 20%;
+    margin: 3%;
 }
 
 .why-choose-text{
@@ -83,12 +82,13 @@
 
 .why-choose-text h3{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 4vh;
     line-height: 35px;
     text-align: left;
 }
 
 .why-choose-text p{
+    font-size: 3vw;
     text-align: left;
 }
 
@@ -192,29 +192,24 @@
 }
 
 .contac-us{
-    margin: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
-    align-items: center;
 }
 
 .contac-us img{
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 }
 
 .contac-us .contac-us-text{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-weight: 400;
     font-size: 12px;
     line-height: 23px;
-    text-align: left;
-}
-
-.mini-boxes ol{
-    padding-left: 15px;
 }
 
 .mini-boxes ol li a{
@@ -240,6 +235,14 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .why-choose-text h3{
+        font-size: 3vh;
+    }
+
+    .why-choose-text p{
+        font-size: 2vw;
     }
 
     .about-us .section-content{
@@ -286,6 +289,14 @@
         width: 33vw;
         height: 5vh;
     }
+
+    .contac-us .contac-us-text{
+        font-size: 2vw;
+    }
+
+    .mini-container{
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -296,7 +307,7 @@
     }
 
     main{
-        margin-left: 200px;
+        margin-left: 25%;
     }
 
     .fix-header .header-items:nth-child(1){
@@ -328,6 +339,10 @@
         line-height: 35px;
     }
 
+    .why-choose-text p{
+        font-size: 2vw;
+    }
+
     .form-children input{
         width: 28vw;
         height: 5vh;
@@ -344,7 +359,7 @@
     }
 
     .contac-us .contac-us-text{
-        font-size: 15px;
+        font-size: 2vw;
     }
 
     .mini-container{

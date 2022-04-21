@@ -1,0 +1,26 @@
+.fix-header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373867;
+}
+
+.fix-header .header-items{
+    display: flex;
+}
+
+.fix-header .header-items:nth-child(1){
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.fix-header .header-items:nth-child(2){
+    width: 45px;
+    height: 45px;
+    margin-left: 45px;
+}

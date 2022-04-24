@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/landing.jpg);
+    background-image: url(../assets/img/landing.jpg);
 }
 
 .homepage h1{
@@ -136,59 +136,11 @@
     border-top: 35px solid #49A37B;
 }
 
-.get-in-touch .boxes .trackgenix-style-button{
+.get-in-touch .boxes .trackgenix-button-green{
     width: 260px;
     height: 34px;
     margin: 0;
     margin-bottom: 10px;
-}
-
-.form-children{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-children label{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 16px;
-}
-
-::placeholder{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #373867;
-    opacity: 0.5;
-}
-
-.form-children input{
-    width: 55vw;
-    height: 5vh;
-    border: 1px solid #373867;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-.form-children select{
-    width: 55vw;
-    height: 5vh;
-    border: 1px solid #373867;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-.form-children textarea{
-    width: 55vw;
-    height: 12vh;
-    border: 1px solid #373867;
-    box-sizing: border-box;
-    border-radius: 10px;
 }
 
 .contac-us{
@@ -270,17 +222,17 @@
         order: 2;
     }
 
-    .form-children input{
+    .input{
         width: 33vw;
         height: 5vh;
     }
     
-    .form-children select{
+    .select{
         width: 33vw;
         height: 5vh;
     }
     
-    .form-children textarea{
+    .textarea{
         width: 36vw;
         height: 12vh;
     }
@@ -343,17 +295,17 @@
         font-size: 2vw;
     }
 
-    .form-children input{
+    .input{
         width: 28vw;
         height: 5vh;
     }
     
-    .form-children select{
+    .select{
         width: 28vw;
         height: 5vh;
     }
     
-    .form-children textarea{
+    .textarea{
         width: 31vw;
         height: 12vh;
     }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/stylesheet-trackgenix.css">
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
@@ -17,25 +18,56 @@
 <body>
     <header class="fix-header">
         <div class="header-items">
-            <img src="img/hamburger-menu.png" alt="desplegable menu for sidebar">
+            <img src="../assets/icons/hamburger-menu.png" alt="desplegable menu for sidebar">
         </div>
         <div class="header-items">
-            <img src="img/interface-security-shield.png" alt="mini company logo">
+            <img src="../assets/img/interface-security-shield.png" alt="mini company logo">
         </div>
         <button class="trackgenix-style-button">Sing Up</button>
     </header>
     <main>
         <section class="login">
-
+            <div class="section-title">
+                <div class="img-container">
+                    <a href="../views/index.html">
+                        <img src="../assets/img/interface-security-shield.png" alt="company logo">
+                    </a>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="border-container">
+                    <h2 class="h2">Log In!</h2>
+                    <form class="login-form" id="login-form">
+                        <div class="form-children">
+                            <label class="label" for="email">Email</label>
+                            <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
+                            <p id="error-email-hide" class="error-email-hident">Please enter valid email characters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="pwd">Password</label>
+                            <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
+                            <p id="error-pwd-hide" class="error-pwd-hident">Please just enter letters and numbers</p>
+                        </div>
+                    </form>
+                    <div class="checkbox">
+                        <input class="check-input" type="checkbox" id="remember-me">
+                        <label class="label" for="remember-me">Remember me</label>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="trackgenix-button-white" type="submit" value="Submit">Forgot Password?</button>
+                    <button class="trackgenix-button-green" type="submit" value="Submit" id="send">Continue</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="social-media-icons">
-            <img src="img/linkedin.png" alt="linkedin icon">
-            <img src="img/twitter.png" alt="twitter icon">
-            <img src="img/facebook.png" alt="facebook icon">
-            <img src="img/instagram.png" alt="instagram icon">
-            <img src="img/githab.png" alt="github icon">
+            <img src="../assets/icons/linkedin.png" alt="linkedin icon">
+            <img src="../assets/icons/twitter.png" alt="twitter icon">
+            <img src="../assets/icons/facebook.png" alt="facebook icon">
+            <img src="../assets/icons/instagram.png" alt="instagram icon">
+            <img src="../assets/icons/githab.png" alt="github icon">
         </div>
         <p class="footer-text">
             Rosario, Argentina

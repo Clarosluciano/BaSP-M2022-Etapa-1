@@ -31,11 +31,14 @@ body{
     color: #373867;
 }
 
-.section-title h2{
+.section-title{
     height: 10%;
     margin-top: 15px;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.h2{
     font-weight: 700;
     font-size: 30px;
     line-height: 47px;
@@ -50,6 +53,14 @@ body{
 
 .section-content{
     height: 90%;
+}
+
+.border-container{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid #373867;
+    border-radius: 20px;
 }
 
 .boxes{
@@ -75,4 +86,126 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.trackgenix-button-green{
+    width: 65px;
+    height: 34px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #AACE9B;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    color: #373867;
+}
+
+.trackgenix-button-white{
+    width: 45%;
+    height: 34px;
+    border: 1px solid #373867;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #373867;
+}
+
+.form-children{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-email-hident{
+    display: none;
+}
+
+.error-email{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: #bb2929;
+    display: block;
+}
+
+.error-pwd-hident{
+    display: none;
+}
+
+.error-pwd{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    color: #bb2929;
+    display: block;
+}
+
+.label{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #373867;
+    opacity: 0.5;
+}
+
+.input{
+    width: 55vw;
+    height: 5vh;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.incorrect-input{
+    border: 1px solid #bb2929;
+}
+
+.select{
+    width: 55vw;
+    height: 5vh;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.textarea{
+    width: 55vw;
+    height: 12vh;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.checkbox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 7%;
+    display: flex;
+}
+
+.check-input{
+    margin-right: 5px;
+}
+
+.buttons{
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
 }

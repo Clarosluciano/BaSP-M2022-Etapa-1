@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sing Up</title>
+    <title>SING UP</title>
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/stylesheet-trackgenix.css">
     <link rel="stylesheet" href="../styles/sing-up.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
@@ -17,25 +18,92 @@
 <body>
     <header class="fix-header">
         <div class="header-items">
-            <img src="img/hamburger-menu.png" alt="desplegable menu for sidebar">
+            <img src="../assets/icons/hamburger-menu.png" alt="desplegable menu for sidebar">
         </div>
         <div class="header-items">
-            <img src="img/interface-security-shield.png" alt="mini company logo">
+            <img src="../assets/img/interface-security-shield.png" alt="mini company logo">
         </div>
         <button class="trackgenix-style-button">Sing Up</button>
     </header>
     <main>
         <section class="sing-up">
-            
+            <div class="section-title">
+                <div class="img-container">
+                    <a href="../views/index.html">
+                        <img src="../assets/img/interface-security-shield.png" alt="company logo">
+                    </a>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="border-container">
+                    <h2 class="h2">Sing Up!</h2>
+                    <div class="boxes">
+                        <form class="sing-up-form">
+                            <div class="form-children">
+                                <label class="label" for="first-name">First name</label>
+                                <input class="input" type="text" name="first-name" placeholder="Click on me to write" id="first-name">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="last-name">Last name</label>
+                                <input class="input" type="text" name="last-name" placeholder="Click on me to write" id="last-name">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="birthday">Birthday</label>
+                                <input class="input" type="date" name="birthday" id="birthday">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="dni">DNI Nº</label>
+                                <input class="input" type="text" name="dni" placeholder="Click on me to write" id="dni">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="phone">Phone number</label>
+                                <input class="input" type="tel" name="phone" placeholder="Ej: 0(341)777-7777" id="phone">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="address">Address</label>
+                                <input class="input" type="text" name="address" placeholder="Click on me to write" id="address">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="boxes">
+                        <form class="sing-up-form">
+                            <div class="form-children">
+                                <label class="label" for="locality">Locality</label>
+                                <input class="input" type="text" name="locality" placeholder="Click on me to write" id="locality">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="postal-code">Postal Code</label>
+                                <input class="input" type="text" name="postal-code" placeholder="Click on me to write" id="postal-code">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="email">Email</label>
+                                <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="pwd">Password</label>
+                                <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="re-pwd">Repeat password</label>
+                                <input class="input" type="password" name="re-pwd" placeholder="Click on me to write" id="re-pwd">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="trackgenix-button-green" type="submit" value="Submit">CREATE ACCOUNT</button>
+                    <button class="trackgenix-button-white" type="reset">Cancel</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="social-media-icons">
-            <img src="img/linkedin.png" alt="linkedin icon">
-            <img src="img/twitter.png" alt="twitter icon">
-            <img src="img/facebook.png" alt="facebook icon">
-            <img src="img/instagram.png" alt="instagram icon">
-            <img src="img/githab.png" alt="github icon">
+            <img src="../assets/icons/linkedin.png" alt="linkedin icon">
+            <img src="../assets/icons/twitter.png" alt="twitter icon">
+            <img src="../assets/icons/facebook.png" alt="facebook icon">
+            <img src="../assets/icons/instagram.png" alt="instagram icon">
+            <img src="../assets/icons/githab.png" alt="github icon">
         </div>
         <p class="footer-text">
             Rosario, Argentina

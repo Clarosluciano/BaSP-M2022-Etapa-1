@@ -118,6 +118,25 @@ body{
     color: #373867;
 }
 
+.error-div-hident{
+    display: none;
+}
+
+.error-div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bb2929;
+}
+
+.submit-error{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    color: black;
+}
+
 .form-children{
     margin-top: 10px;
     margin-bottom: 10px;

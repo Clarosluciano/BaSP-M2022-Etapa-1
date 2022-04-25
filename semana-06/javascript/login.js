@@ -1,13 +1,16 @@
 window.onload = function(){
     var loginForm = document.getElementById('login-form');
-    var inputs = document.querySelectorAll('#login-form input');
+    var inputEmail = document.querySelector('#email');
+    var inputPwd = document.querySelector('#pwd');
     var expressions = {
-        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+        email: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
         pwd: /^[a-zA-Z0-9]{4,16}$/
     }
-    var fields = {
-        email: false,
-        pwd: false
+    var validateEmail = function(){
+        return !!inputEmail.value.match(expressions.email);
+    }
+    var validatePwd = function(){
+        return !!inputPwd.value.match(expressions.pwd);
     }
     var cleanError = function(e){
         switch (e.target.name){
@@ -23,6 +26,7 @@ window.onload = function(){
         return cleanError;
     }
     var validateForm = function(e){
+        console.log(e.target);
         switch (e.target.name){
             case "email":
                 if(expressions.email.test(e.target.value)){
@@ -45,16 +49,22 @@ window.onload = function(){
         }
         return validateForm;
     }
-    inputs.forEach(function(input){
-        input.addEventListener('focus', cleanError);
-        input.addEventListener('blur', validateForm);
-        return input;
-    })
-    loginForm.addEventListener('submit', function(e){
+    var finalCheck = function(e){
+        console.log(e.target);
         e.preventDefault();
-        if(fields.email && fields.pwd){
-            loginForm.reset();
+        if(validateEmail() && validatePwd()){
+            validateForm();
+        }else{
+            document.getElementById('email').classList.add('incorrect-input');
+            document.getElementById('pwd').classList.add('incorrect-input');
+            document.getElementById('error-div').classList.remove('error-div-hident');
+            document.getElementById('error-div').classList.add('error-div');
         }
-        return e;
-    })
+        return finalCheck;
+    }
+    inputEmail.addEventListener('blur', validateForm);
+    inputEmail.addEventListener('focus', cleanError);
+    inputPwd.addEventListener('blur', validateForm);
+    inputPwd.addEventListener('focus', cleanError);
+    loginForm.addEventListener('submit', finalCheck);
 }

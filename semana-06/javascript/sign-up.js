@@ -2,8 +2,8 @@ window.onload = function(){
     var expressions = {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     }
-    var form = document.getElementById('form-sing-up');
-    var inputs = document.querySelectorAll('#form-sing-up input');
+    var form = document.getElementById('form-sign-up');
+    var inputs = document.querySelectorAll('#form-sign-up input');
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);

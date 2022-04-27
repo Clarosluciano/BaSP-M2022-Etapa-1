@@ -21,10 +21,15 @@ This time, teachers asked us to make a fully responsive landing page for differe
 ## Brief description:
 For this task, teachers asked us to make six JSdocs to practice JavaScript, which is the new programming language we learned about this week. The first part of the task consists in putting in to practise what was explained in class. The second part consists in devoloping a JSdoc that adds functionality to the landing page that was made in the past weeks.
 
+# 6th week Exercise
+
+## Brief description:
+For this task, teachers asked us to make the sign up page and the login page diagramed in the fisrt week to continue practice JavaScript and DOM. The task consists in give functionality to both pages and be able to validate the forms present in them manipulating the js node tree.
+
 ## Steps for visualize the landing page:
 
 ```
-1- Copy this link in your browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-04/
+1- Copy this link in your browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-06/
 ```
 
 Or:

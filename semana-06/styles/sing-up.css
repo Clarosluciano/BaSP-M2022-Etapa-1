@@ -6,15 +6,22 @@
     background: rgba(55, 56, 103, 0.4);
 }
 
-.section-content{
+.sing-up .section-title{
+    margin-top: 100px;
+}
+
+.sing-up .section-content{
     width: 80%;
     margin-bottom: 100px;
     background-color: white;
     border-radius: 20px;
 }
 
-.sing-up .section-title{
-    margin-top: 100px;
+.sing-up-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-container{

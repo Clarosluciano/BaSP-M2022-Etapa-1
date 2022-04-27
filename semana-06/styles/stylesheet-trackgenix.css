@@ -144,23 +144,11 @@ body{
     flex-direction: column;
 }
 
-.error-email-hident{
+.error-text-hident{
     display: none;
 }
 
-.error-email{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 16px;
-    color: #bb2929;
-    display: block;
-}
-
-.error-pwd-hident{
-    display: none;
-}
-
-.error-pwd{
+.error-text{
     font-weight: 500;
     font-size: 15px;
     line-height: 16px;

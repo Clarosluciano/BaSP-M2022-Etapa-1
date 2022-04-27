@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SING UP</title>
+    <title>SIGN UP</title>
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,62 +36,70 @@
             </div>
             <div class="section-content">
                 <div class="border-container">
-                    <h2 class="h2">Sing Up!</h2>
-                    <div class="boxes">
-                        <form class="sing-up-form">
-                            <div class="form-children">
-                                <label class="label" for="first-name">First name</label>
-                                <input class="input" type="text" name="first-name" placeholder="Click on me to write" id="first-name">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="last-name">Last name</label>
-                                <input class="input" type="text" name="last-name" placeholder="Click on me to write" id="last-name">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="birthday">Birthday</label>
-                                <input class="input" type="date" name="birthday" id="birthday">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="dni">DNI Nº</label>
-                                <input class="input" type="text" name="dni" placeholder="Click on me to write" id="dni">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="phone">Phone number</label>
-                                <input class="input" type="tel" name="phone" placeholder="Ej: 0(341)777-7777" id="phone">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="address">Address</label>
-                                <input class="input" type="text" name="address" placeholder="Click on me to write" id="address">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="boxes">
-                        <form class="sing-up-form">
-                            <div class="form-children">
-                                <label class="label" for="locality">Locality</label>
-                                <input class="input" type="text" name="locality" placeholder="Click on me to write" id="locality">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="postal-code">Postal Code</label>
-                                <input class="input" type="text" name="postal-code" placeholder="Click on me to write" id="postal-code">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="email">Email</label>
-                                <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="pwd">Password</label>
-                                <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
-                            </div>
-                            <div class="form-children">
-                                <label class="label" for="re-pwd">Repeat password</label>
-                                <input class="input" type="password" name="re-pwd" placeholder="Click on me to write" id="re-pwd">
-                            </div>
-                        </form>
-                    </div>
+                    <h2 class="h2">Sign Up!</h2>
+                    <form id="form-sing-up" class="sing-up-form">
+                        <div class="form-children">
+                            <label class="label" for="first-name">First name</label>
+                            <input class="input" type="text" name="first-name" placeholder="Click on me to write" id="first-name">
+                            <p id="error-first-name-hide" class="error-text-hident">Error: Only letters and must have more than 3 letters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="last-name">Last name</label>
+                            <input class="input" type="text" name="last-name" placeholder="Click on me to write" id="last-name">
+                            <p id="error-last-name-hide" class="error-text-hident">Error: Only letters and must have more than 3 letters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="birthday">Birthday</label>
+                            <input class="input" type="date" name="birthday" id="birthday">
+                            <p id="error-birthday-hide" class="error-text-hident">Error: In mm/dd/yyyy format</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="dni">DNI Nº</label>
+                            <input class="input" type="text" name="dni" placeholder="Click on me to write" id="dni">
+                            <p id="error-dni-hide" class="error-text-hident">Error: Only numbers and must have more than 7 numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="phone">Phone number</label>
+                            <input class="input" type="tel" name="phone" placeholder="Ej: 0(341)777-7777" id="phone">
+                            <p id="error-phone-hide" class="error-text-hident">Error: Only numbers and must have 10 numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="address">Address</label>
+                            <input class="input" type="text" name="address" placeholder="Click on me to write" id="address">
+                            <p id="error-address-hide" class="error-text-hident">Must be at least 5 characters long with letters, numbers and a space in between</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="locality">Locality</label>
+                            <input class="input" type="text" name="locality" placeholder="Click on me to write" id="locality">
+                            <p id="error-locality-hide" class="error-text-hident">Error: Must be alphanumeric text and must have more than 3 letters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="postal-code">Postal Code</label>
+                            <input class="input" type="text" name="postal-code" placeholder="Click on me to write" id="postal-code">
+                            <p id="error-postal-code-hide" class="error-text-hident">Error: Only numbers and must have between 4 and 5 numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="email">Email</label>
+                            <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
+                            <p id="error-email-hide" class="error-text-hident">Error: It must have a valid email format</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="pwd">Password</label>
+                            <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
+                            <p id="error-pwd-hide" class="error-text-hident">Error: At least 8 characters, made up of letters and numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="re-pwd">Repeat password</label>
+                            <input class="input" type="password" name="re-pwd" placeholder="Click on me to write" id="re-pwd">
+                            <p id="error-re-pwd-hide" class="error-text-hident">Error: Passwords do not match</p>
+                        </div>
+                    </form>
+                </div>
+                <div id="error-div" class="error-div-hident">
+                    <p class="submit-error">The filled fields are invalid</p>
                 </div>
                 <div class="buttons">
-                    <button class="trackgenix-button-green" type="submit" value="Submit">CREATE ACCOUNT</button>
+                    <button id="send" class="trackgenix-button-green" type="submit" value="Submit" form="form-sing-up">CREATE ACCOUNT</button>
                     <button class="trackgenix-button-white" type="reset">Cancel</button>
                 </div>
             </div>

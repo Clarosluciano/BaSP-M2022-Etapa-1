@@ -1,0 +1,51 @@
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(55, 56, 103, 0.4);
+}
+
+.sign-up .section-title{
+    margin-top: 100px;
+}
+
+.sign-up .section-content{
+    width: 80%;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.img-container img{
+    width: 18vw;
+}
+
+.buttons{
+    margin-bottom: 50px;
+}
+
+.buttons .trackgenix-button-green{
+    width: 45%;
+    margin-right: 0px;
+}
+
+.buttons .trackgenix-button-white{
+    width: 30%;
+    margin-right: 0px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/stylesheet-trackgenix.css">
+    <link rel="stylesheet" href="../styles/sign-up.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <script src="../javascript/sign-up.js"></script>
+</head>
+<body>
+    <header class="fix-header">
+        <div class="header-items">
+            <img src="../assets/icons/hamburger-menu.png" alt="desplegable menu for sidebar">
+        </div>
+        <div class="header-items">
+            <img src="../assets/img/interface-security-shield.png" alt="mini company logo">
+        </div>
+        <button class="trackgenix-style-button">Sign Up</button>
+    </header>
+    <main>
+        <section class="sign-up">
+            <div class="section-title">
+                <div class="img-container">
+                    <a href="../views/index.html">
+                        <img src="../assets/img/interface-security-shield.png" alt="company logo">
+                    </a>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="border-container">
+                    <h2 class="h2">Sign Up!</h2>
+                    <form id="form-sign-up" class="sign-up-form">
+                        <div class="form-children">
+                            <label class="label" for="first-name">First name</label>
+                            <input class="input" type="text" name="firstName" placeholder="Click on me to write" id="firstName">
+                            <p id="error-first-name-hide" class="error-text-hident">Error: Only letters and must have more than 3 letters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="last-name">Last name</label>
+                            <input class="input" type="text" name="lastName" placeholder="Click on me to write" id="lastName">
+                            <p id="error-last-name-hide" class="error-text-hident">Error: Only letters and must have more than 3 letters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="birthday">Birthday</label>
+                            <input class="input" type="date" name="birthday" id="birthday">
+                            <p id="error-birthday-hide" class="error-text-hident">Error: In mm/dd/yyyy format</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="dni">DNI Nº</label>
+                            <input class="input" type="text" name="dni" placeholder="Click on me to write" id="dni">
+                            <p id="error-dni-hide" class="error-text-hident">Error: Only numbers and must have more than 7 numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="phone">Phone number</label>
+                            <input class="input" type="tel" name="phone" placeholder="Ej: 0(341)777-7777" id="phone">
+                            <p id="error-phone-hide" class="error-text-hident">Error: Only numbers and must have 10 numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="address">Address</label>
+                            <input class="input" type="text" name="address" placeholder="Click on me to write" id="address">
+                            <p id="error-address-hide" class="error-text-hident">Must be at least 5 characters long with letters, numbers and a space</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="locality">Locality</label>
+                            <input class="input" type="text" name="locality" placeholder="Click on me to write" id="locality">
+                            <p id="error-locality-hide" class="error-text-hident">Error: Must be alphanumeric text and must have more than 3 letters</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="postal-code">Postal Code</label>
+                            <input class="input" type="text" name="postalCode" placeholder="Click on me to write" id="postalCode">
+                            <p id="error-postal-code-hide" class="error-text-hident">Error: Only numbers and must have between 4 and 5 numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="email">Email</label>
+                            <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
+                            <p id="error-email-hide" class="error-text-hident">Error: It must have a valid email format</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="pwd">Password</label>
+                            <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
+                            <p id="error-pwd-hide" class="error-text-hident">Error: At least 8 characters, made up of letters and numbers</p>
+                        </div>
+                        <div class="form-children">
+                            <label class="label" for="re-pwd">Repeat password</label>
+                            <input class="input" type="password" name="rePwd" placeholder="Click on me to write" id="rePwd">
+                            <p id="error-re-pwd-hide" class="error-text-hident">Error: Passwords do not match</p>
+                        </div>
+                    </form>
+                </div>
+                <div id="error-div" class="error-div-hident">
+                    <p class="submit-error">The filled fields are invalid</p>
+                </div>
+                <div class="buttons">
+                    <button id="send" class="trackgenix-button-green" type="submit" value="Submit" form="form-sign-up">CREATE ACCOUNT</button>
+                    <button class="trackgenix-button-white" type="reset">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="social-media-icons">
+            <img src="../assets/icons/linkedin.png" alt="linkedin icon">
+            <img src="../assets/icons/twitter.png" alt="twitter icon">
+            <img src="../assets/icons/facebook.png" alt="facebook icon">
+            <img src="../assets/icons/instagram.png" alt="instagram icon">
+            <img src="../assets/icons/githab.png" alt="github icon">
+        </div>
+        <p class="footer-text">
+            Rosario, Argentina
+        </p>
+        <p class="footer-text">
+            Copyright © 2022 Trackgenix S.A. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

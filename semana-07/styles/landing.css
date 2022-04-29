@@ -1,0 +1,351 @@
+.homepage{
+    width: 100%;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/img/landing.jpg);
+}
+
+.homepage h1{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.homepage img{
+    width: 300px;
+    height: 300px;
+}
+
+.what-is-trackgenix{
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 35px solid #49A37B;
+}
+
+.what-is-trackgenix h3{
+    margin: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.what-is-trackgenix p{
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.what-is-trackgenix .boxes img{
+    margin-top: 30px;
+    width: 250px;
+    height: 350px;
+}
+
+.why-choose-trackgenix{
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 35px solid #49A37B;
+}
+
+.why-choose-children{
+    width: 100%;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.why-choose-children img{
+    width: 20%;
+    height: 20%;
+    margin: 3%;
+}
+
+.why-choose-text{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-choose-text h3{
+    font-weight: 700;
+    font-size: 4vh;
+    line-height: 35px;
+    text-align: left;
+}
+
+.why-choose-text p{
+    font-size: 3vw;
+    text-align: left;
+}
+
+.about-us{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 35px solid #49A37B;
+}
+
+[class*="about-us-boxes-"]{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="about-us-boxes-"]{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+[class*="about-us-boxes-"] p{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    text-align: center;   
+}
+
+[class*="about-us-boxes-"] img{
+    width: 280px;
+    height: 200px;
+}
+
+.get-in-touch{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 35px solid #49A37B;
+}
+
+.get-in-touch .boxes .trackgenix-button-green{
+    width: 260px;
+    height: 34px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.contac-us{
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+}
+
+.contac-us img{
+    width: 55px;
+    height: 55px;
+}
+
+.contac-us .contac-us-text{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 23px;
+}
+
+.mini-boxes ol li a{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 480px) {
+    /* For tablets */
+
+    .section-content{
+        height: 90%;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .boxes{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .why-choose-text h3{
+        font-size: 3vh;
+    }
+
+    .why-choose-text p{
+        font-size: 2vw;
+    }
+
+    .about-us .section-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    [class*="about-us-boxes-"]{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-us-boxes-1 p{
+        text-align: left;
+    }
+
+    .about-us-boxes-2 img{
+        order: 1;
+    }
+
+    .about-us-boxes-2 p{
+        text-align: right;
+        order: 2;
+    }
+
+    .input{
+        width: 33vw;
+        height: 5vh;
+    }
+    
+    .select{
+        width: 33vw;
+        height: 5vh;
+    }
+    
+    .textarea{
+        width: 36vw;
+        height: 12vh;
+    }
+
+    .get-in-touch .boxes .trackgenix-style-button{
+        width: 33vw;
+        height: 5vh;
+    }
+
+    .contac-us .contac-us-text{
+        font-size: 2vw;
+    }
+
+    .mini-container{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* for desktop */
+
+    body{
+        font-size: 15px;
+    }
+
+    main{
+        margin-left: 25%;
+    }
+
+    .fix-header .header-items:nth-child(1){
+        visibility: hidden;
+    }
+
+    .fix-aside{
+        display: block;
+    }
+
+    .footer{
+        position: fixed;
+        bottom: 0px;
+    }
+
+    .section-title h2{
+        height: 10%;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 47px;
+        text-align: center;
+    }
+    
+    .caption{
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .why-choose-text p{
+        font-size: 2vw;
+    }
+
+    .input{
+        width: 28vw;
+        height: 5vh;
+    }
+    
+    .select{
+        width: 28vw;
+        height: 5vh;
+    }
+    
+    .textarea{
+        width: 31vw;
+        height: 12vh;
+    }
+
+    .contac-us .contac-us-text{
+        font-size: 2vw;
+    }
+
+    .mini-container{
+        height: 250px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /*for desktop */
+
+    body{
+        font-size: 21px;
+    }
+
+    .section-title h2{
+        height: 10%;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-weight: 700;
+        font-size: 39px;
+        line-height: 47px;
+        text-align: center;
+    }
+    
+    .caption{
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 35px;
+    }
+
+    .contac-us .contac-us-text{
+        font-size: 18px;
+    }
+}

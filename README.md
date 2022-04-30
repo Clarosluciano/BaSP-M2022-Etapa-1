@@ -24,17 +24,17 @@ For this task, teachers asked us to make six JSdocs to practice JavaScript, whic
 # 6th week Exercise
 
 ## Brief description:
-For this task, teachers asked us to make the sign up page and the login page diagramed in the fisrt week to continue practice JavaScript and DOM. The task consists in give functionality to both pages and be able to validate the forms present in them manipulating the js node tree.
+For this task, teachers asked us to make the sign up page and the login page diagramed in the first week to continue practice JavaScript and DOM. The task consists in give functionality to both pages and be able to validate the forms present in them manipulating the js node tree.
 
 # 7th week Exercise
 
 ## Brief description:
-For this task, teachers asked us to make the "request" part of the sign up page and the login page diagramed in the fisrt week. The task of this week consists of understanding and applying the logic that is used to make "request" to the APIs and receive a satisfactory or erroneous response depending on the case. The correct use of "promises", such as the .then and .catch methods will be the central axis of the task.
+For this task, teachers asked us to make the "request" part of the sign up page and the login page diagramed in the first week. This week's rubric consisted of understanding and applying the logic that is used to make "request" to the APIs and receive a satisfactory or erroneous response depending on each case. The correct use of "promises", such as the .then and .catch methods will be the task's central axis.
 
 ## Steps for visualize the landing page:
 
 ```
-1- Copy this link in your browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-06/
+1- Copy this link in your browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-07/
 ```
 
 Or:

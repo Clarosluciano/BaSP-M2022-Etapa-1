@@ -48,12 +48,24 @@ window.onload = function(){
         }
         return validateForm;
     }
-    var finalCheck = function(e){
+    var finalCheck = function(e){ //modificación de la semana 07
         console.log(e.target);
         e.preventDefault();
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
+        var queryParams = `email=${inputEmail.value}&password=${inputPwd.value}`;
         if(validateEmail() && validatePwd()){
             validateForm(e);
-            alert('Login success!')
+            fetch(`${url}${queryParams}`)
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json);
+                alert(`Login success! \n${json.msg}`);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+            document.getElementById('error-div').classList.add('error-div-hident');
+            document.getElementById('error-div').classList.remove('error-div');
         }else{
             if(!validateEmail()){
                 document.getElementById('email').classList.add('incorrect-input');

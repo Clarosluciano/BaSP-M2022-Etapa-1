@@ -242,17 +242,26 @@ window.onload = function(){
         }
         return cleanError;
     }
-    var finalCheck = function(e){
+    var finalCheck = function(e){ //modificación de la semana 07
         e.preventDefault();
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
+        var queryParams = `name=${inputFirstName.value}&lastName=${inputLastName.value}&dob=${inputBirthday.value}
+        &dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAddress.value}&city=${inputLocality.value}
+        &zip=${inputPostalCode.value}&email=${inputEmail.value}&password=${inputPwd.value}&rePwd=${inputRePwd.value}`;
         if(validateFirstName(e) && validateLastName(e) && validateBirthday(e) && validateDni(e) && validatePhone(e)
          && validateAddress(e) && validateLocality(e) && validatePostalCode(e) && validateEmail(e) && validatePwd(e) && validateRePwd(e)){
-            alert('Sign Up success!');
+            fetch(`${url}${queryParams}`)
+            .then((response) => response.json())
+            .catch((error) => {
+                console.log(error);
+            })
             document.getElementById('error-div').classList.add('error-div-hident');
             document.getElementById('error-div').classList.remove('error-div');
+            alert('Sign Up success!');
         }else{
             document.getElementById('error-div').classList.remove('error-div-hident');
             document.getElementById('error-div').classList.add('error-div');
-            console.log(queryParams);
+            alert('Error');
         }
     }
     inputFirstName.addEventListener('blur', validateFirstName);
@@ -270,14 +279,4 @@ window.onload = function(){
         input.addEventListener ('focus', cleanError)
     })
     form.addEventListener('submit', finalCheck);
-
-    //---------------Acá empieza lo de la semana 07:-------------
-
-    var sendButton = document.querySelector('#send');
-    var queryParams = `${inputFirstName.value}`; //rellenar desp
-    
-
-
-
-
 }

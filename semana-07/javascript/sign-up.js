@@ -1,5 +1,3 @@
-//------no pude hacer funcionar el botón, no sé como guardar valores de un switch y luego
-//------reutilizarlos para la validación final. Así que empecé el código de cero.
 window.onload = function(){
     var expressions = {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -70,24 +68,24 @@ window.onload = function(){
         }
         return letter && number
     }
-    var validateFirstName = function(){
-        if(!onlyLetters(inputFirstName.value)){
+    var validateFirstName = function(e){
+        if(e.target.value.length > 3 && (onlyLetters(e.target.value))){
+            return true;
+        }else{
             document.getElementById('firstName').classList.add('incorrect-input');
             document.getElementById('error-first-name-hide').classList.add('error-text');
             document.getElementById('error-first-name-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
-    var validateLastName = function(){
-        if(!onlyLetters(inputLastName.value)){
+    var validateLastName = function(e){
+        if(e.target.value.length > 3 && (onlyLetters(e.target.value))){
+            return true;
+        }else{
             document.getElementById('lastName').classList.add('incorrect-input');
             document.getElementById('error-last-name-hide').classList.add('error-text');
             document.getElementById('error-last-name-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
     var validateBirthday = function(){
@@ -102,28 +100,28 @@ window.onload = function(){
             return true;
         }
     }
-    var validateDni = function(){
-        if(!onlyNums(inputDni.value)){
+    var validateDni = function(e){
+        if(e.target.value.length >= 7 && (onlyNums(e.target.value))){
+            return true;
+        }else{
             document.getElementById('dni').classList.add('incorrect-input');
             document.getElementById('error-dni-hide').classList.add('error-text');
             document.getElementById('error-dni-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
-    var validatePhone = function(){
-        if(!onlyNums(inputPhone.value)){
+    var validatePhone = function(e){
+        if(e.target.value.length >= 10 && (onlyNums(e.target.value))){
+            return true;
+        }else{
             document.getElementById('phone').classList.add('incorrect-input');
             document.getElementById('error-phone-hide').classList.add('error-text');
             document.getElementById('error-phone-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
-    var validateAddress = function(){
-        if(!lettersAndNumsAndSpace(inputAddress.value)){
+    var validateAddress = function(e){
+        if(!lettersAndNumsAndSpace(e.target.value)){
             document.getElementById('address').classList.add('incorrect-input');
             document.getElementById('error-address-hide').classList.add('error-text');
             document.getElementById('error-address-hide').classList.remove('error-text-hident');
@@ -132,27 +130,27 @@ window.onload = function(){
             return true;
         }
     }
-    var validateLocality = function(){
-        if(!onlyLetters(inputLocality.value)){
+    var validateLocality = function(e){
+        if(e.target.value.length > 3 && (onlyLetters(e.target.value))){
+            return true;
+        }else{
             document.getElementById('locality').classList.add('incorrect-input');
             document.getElementById('error-locality-hide').classList.add('error-text');
             document.getElementById('error-locality-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
-    var validatePostalCode = function(){
-        if(!onlyNums(inputPostalCode.value)){
+    var validatePostalCode = function(e){
+        if(e.target.value.length >= 4 && e.target.value.length <= 5 && (onlyNums(e.target.value))){
+            return true;
+        }else{
             document.getElementById('postalCode').classList.add('incorrect-input');
             document.getElementById('error-postal-code-hide').classList.add('error-text');
             document.getElementById('error-postal-code-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
-    var validateEmail = function(){
+    var validateEmail = function(e){
         if(!inputEmail.value.match(expressions.email)){
             document.getElementById('email').classList.add('incorrect-input');
             document.getElementById('error-email-hide').classList.add('error-text');
@@ -162,24 +160,24 @@ window.onload = function(){
             return true;
         }
     }
-    var validatePwd = function(){
-        if(!lettersAndNums(inputPwd.value)){
+    var validatePwd = function(e){
+        if(e.target.value.length > 8 && (lettersAndNums(e.target.value))){
+            return true;
+        }else{
             document.getElementById('pwd').classList.add('incorrect-input');
             document.getElementById('error-pwd-hide').classList.add('error-text');
             document.getElementById('error-pwd-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
-    var validateRePwd = function(){
-        if(!lettersAndNums(inputRePwd.value)){
+    var validateRePwd = function(e){
+        if(e.target.value.length > 8 && (lettersAndNums(e.target.value))){
+            return true;
+        }else{
             document.getElementById('rePwd').classList.add('incorrect-input');
             document.getElementById('error-re-pwd-hide').classList.add('error-text');
             document.getElementById('error-re-pwd-hide').classList.remove('error-text-hident');
             return false;
-        }else{
-            return true;
         }
     }
     var cleanError = function(e){

@@ -4,13 +4,59 @@ window.onload = function(){
     var inputPwd = document.querySelector('#pwd');
     var expressions = {
         email: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-        pwd: /^[a-zA-Z0-9]{4,16}$/
+    }
+    function onlyLetters(string) {
+        for (var i = 0; i < string.length; i++) {
+            var c = string.charAt(i);
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ')){
+                var error = false;
+            }else if (c == ''){
+                var noEmpty = false;
+            }else{
+                return true
+            }
+        }
+        return error && noEmpty;
+    }
+    var onlyNums = function(letnum){
+        var includedNumbers = ['0','1','2','3','4','5','6','7','8','9'];
+        for (var i = 0; i < letnum.length; i++){
+            if(!includedNumbers.includes(letnum[i])){
+                var error = false;
+            }else if(letnum == ''){
+                var noEmpty = false;
+            }else{
+                return true
+            }
+        }
+        return error && noEmpty;
+    }
+    var lettersAndNums = function(letnum){
+        var letter = false;
+        var number = false;
+        for (var i = 0; i < letnum.length; i++){
+            if(onlyLetters(letnum[i])){
+                letter = true;
+            }else if(onlyNums(letnum[i])){
+                number = true;
+            }else{
+                return false;
+            }
+        }
+        return letter && number;
     }
     var validateEmail = function(){
         return !!inputEmail.value.match(expressions.email);
     }
     var validatePwd = function(){
-        return !!inputPwd.value.match(expressions.pwd);
+        if(!lettersAndNums(inputPwd.value)){
+            document.getElementById('pwd').classList.add('incorrect-input');
+            document.getElementById('error-pwd-hide').classList.add('error-text');
+            document.getElementById('error-pwd-hide').classList.remove('error-text-hident');
+            return false;
+        }else{
+            return true;
+        }
     }
     var cleanError = function(e){
         switch (e.target.name){
@@ -37,7 +83,7 @@ window.onload = function(){
                 }
             break;
             case "pwd":
-                if(expressions.pwd.test(e.target.value)){
+                if(validatePwd()){
                     document.getElementById('pwd').classList.remove('incorrect-input');
                 }else{
                     document.getElementById('pwd').classList.add('incorrect-input');
@@ -49,7 +95,6 @@ window.onload = function(){
         return validateForm;
     }
     var finalCheck = function(e){ //modificación de la semana 07
-        console.log(e.target);
         e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
         var queryParams = `email=${inputEmail.value}&password=${inputPwd.value}`;
@@ -57,12 +102,13 @@ window.onload = function(){
             validateForm(e);
             fetch(`${url}${queryParams}`)
             .then((response) => response.json())
-            .then((json) => {
-                console.log(json);
-                alert(`Login success! \n${json.msg}`);
+            .then((res) => {
+                console.log(res.msg);
+                alert(res.msg);
             })
             .catch((error) => {
-                console.log(error);
+                console.log(error.errors[0].msg);
+                alert(error.errors[0].msg);
             })
             document.getElementById('error-div').classList.add('error-div-hident');
             document.getElementById('error-div').classList.remove('error-div');

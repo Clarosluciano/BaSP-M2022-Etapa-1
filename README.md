@@ -34,7 +34,7 @@ For this task, teachers asked us to make the "request" part of the sign up page 
 ## Steps for visualize the landing page:
 
 ```
-1- Copy this link in your browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-07/
+1- Copy this link in the browser: https://clarosluciano.github.io/BaSP-M2022-Etapa-1/semana-07/views
 ```
 
 Or:

@@ -1,9 +1,12 @@
 window.onload = function(){
+    //-------------Variables section
     var expressions = {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     }
-    var inputs = document.querySelectorAll('#form-sign-up input')
     var form = document.getElementById('form-sign-up');
+    var inputs = document.querySelectorAll('#form-sign-up input')
+    var labels = document.querySelectorAll('#form-sign-up label');
+    var formChildren = document.querySelectorAll('.form-children')
     var inputFirstName = document.getElementById('firstName');
     var inputLastName = document.getElementById('lastName');
     var inputBirthday = document.getElementById('birthday');
@@ -15,6 +18,23 @@ window.onload = function(){
     var inputEmail = document.getElementById('email');
     var inputPwd = document.getElementById('pwd');
     var inputRePwd = document.getElementById('rePwd');
+    //-------------Event listener section
+    inputFirstName.addEventListener('blur', validateFirstName);
+    inputLastName.addEventListener('blur', validateLastName);
+    inputBirthday.addEventListener('blur', validateBirthday);
+    inputDni.addEventListener('blur', validateDni);
+    inputPhone.addEventListener('blur', validatePhone);
+    inputAddress.addEventListener('blur', validateAddress);
+    inputLocality.addEventListener('blur', validateLocality);
+    inputPostalCode.addEventListener('blur', validatePostalCode);
+    inputEmail.addEventListener('blur', validateEmail);
+    inputPwd.addEventListener('blur', validatePwd);
+    inputRePwd.addEventListener('blur', validateRePwd);
+    inputs.forEach((input) => {
+        input.addEventListener ('focus', cleanError)
+    })
+    form.addEventListener('submit', finalCheck);
+    //-------------Validate functions section
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -68,8 +88,8 @@ window.onload = function(){
         }
         return letter && number
     }
-    var validateFirstName = function(e){
-        if(e.target.value.length > 3 && (onlyLetters(e.target.value))){
+    var validateFirstName = function(){
+        if(inputFirstName.value.length > 3 && (onlyLetters(inputFirstName.value))){
             return true;
         }else{
             document.getElementById('firstName').classList.add('incorrect-input');
@@ -78,8 +98,8 @@ window.onload = function(){
             return false;
         }
     }
-    var validateLastName = function(e){
-        if(e.target.value.length > 3 && (onlyLetters(e.target.value))){
+    var validateLastName = function(){
+        if(inputLastName.value.length > 3 && (onlyLetters(inputLastName.value))){
             return true;
         }else{
             document.getElementById('lastName').classList.add('incorrect-input');
@@ -100,8 +120,12 @@ window.onload = function(){
             return true;
         }
     }
-    var validateDni = function(e){
-        if(e.target.value.length >= 7 && (onlyNums(e.target.value))){
+    function formatDate(date) {
+        let dateArray = date.split('-');
+        return dateArray[1] + '/' + dateArray[2] + '/' + dateArray[0];
+      }
+    var validateDni = function(){
+        if(inputDni.value.length >= 7 && (onlyNums(inputDni.value))){
             return true;
         }else{
             document.getElementById('dni').classList.add('incorrect-input');
@@ -110,8 +134,8 @@ window.onload = function(){
             return false;
         }
     }
-    var validatePhone = function(e){
-        if(e.target.value.length >= 10 && (onlyNums(e.target.value))){
+    var validatePhone = function(){
+        if(inputPhone.value.length >= 10 && (onlyNums(inputPhone.value))){
             return true;
         }else{
             document.getElementById('phone').classList.add('incorrect-input');
@@ -120,8 +144,8 @@ window.onload = function(){
             return false;
         }
     }
-    var validateAddress = function(e){
-        if(!lettersAndNumsAndSpace(e.target.value)){
+    var validateAddress = function(){
+        if(!lettersAndNumsAndSpace(inputAddress.value)){
             document.getElementById('address').classList.add('incorrect-input');
             document.getElementById('error-address-hide').classList.add('error-text');
             document.getElementById('error-address-hide').classList.remove('error-text-hident');
@@ -130,8 +154,8 @@ window.onload = function(){
             return true;
         }
     }
-    var validateLocality = function(e){
-        if(e.target.value.length > 3 && (onlyLetters(e.target.value))){
+    var validateLocality = function(){
+        if(inputLocality.value.length > 3 && (onlyLetters(inputLocality.value))){
             return true;
         }else{
             document.getElementById('locality').classList.add('incorrect-input');
@@ -140,8 +164,8 @@ window.onload = function(){
             return false;
         }
     }
-    var validatePostalCode = function(e){
-        if(e.target.value.length >= 4 && e.target.value.length <= 5 && (onlyNums(e.target.value))){
+    var validatePostalCode = function(){
+        if(inputPostalCode.value.length >= 4 && inputPostalCode.value.length <= 5 && (onlyNums(inputPostalCode.value))){
             return true;
         }else{
             document.getElementById('postalCode').classList.add('incorrect-input');
@@ -150,7 +174,7 @@ window.onload = function(){
             return false;
         }
     }
-    var validateEmail = function(e){
+    var validateEmail = function(){
         if(!inputEmail.value.match(expressions.email)){
             document.getElementById('email').classList.add('incorrect-input');
             document.getElementById('error-email-hide').classList.add('error-text');
@@ -160,8 +184,8 @@ window.onload = function(){
             return true;
         }
     }
-    var validatePwd = function(e){
-        if(e.target.value.length > 8 && (lettersAndNums(e.target.value))){
+    var validatePwd = function(){
+        if(inputPwd.value.length > 8 && (lettersAndNums(inputPwd.value))){
             return true;
         }else{
             document.getElementById('pwd').classList.add('incorrect-input');
@@ -170,8 +194,8 @@ window.onload = function(){
             return false;
         }
     }
-    var validateRePwd = function(e){
-        if(e.target.value.length > 8 && (lettersAndNums(e.target.value))){
+    var validateRePwd = function(){
+        if(inputRePwd.value.length > 8 && (lettersAndNums(inputRePwd.value))){
             return true;
         }else{
             document.getElementById('rePwd').classList.add('incorrect-input');
@@ -180,6 +204,7 @@ window.onload = function(){
             return false;
         }
     }
+    //-------------Function that operates with the focus event
     var cleanError = function(e){
         switch (e.target.name){
             case "firstName":
@@ -240,41 +265,48 @@ window.onload = function(){
         }
         return cleanError;
     }
-    var finalCheck = function(e){ //modificación de la semana 07
+    //-------------Function whit the fetch method
+    var finalCheck = function(e){
         e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
-        var queryParams = `name=${inputFirstName.value}&lastName=${inputLastName.value}&dob=${inputBirthday.value}
-        &dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAddress.value}&city=${inputLocality.value}
-        &zip=${inputPostalCode.value}&email=${inputEmail.value}&password=${inputPwd.value}&rePwd=${inputRePwd.value}`;
+        var queryParams = `name=${inputFirstName.value}&lastName=${inputLastName.value}&dob=${formatDate(inputBirthday.value)}&dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAddress.value}&city=${inputLocality.value}&zip=${inputPostalCode.value}&email=${inputEmail.value}&password=${inputPwd.value}&rePwd=${inputRePwd.value}`;
         if(validateFirstName(e) && validateLastName(e) && validateBirthday(e) && validateDni(e) && validatePhone(e)
          && validateAddress(e) && validateLocality(e) && validatePostalCode(e) && validateEmail(e) && validatePwd(e) && validateRePwd(e)){
             fetch(`${url}${queryParams}`)
             .then((response) => response.json())
-            .catch((error) => {
-                console.log(error);
+            .then((json) => {
+                if(json.success){
+                    var dataSuccess = '';
+                    for (var i = 0; i < formChildren.length-1; i++) {
+						dataSuccess += '\n' + labels[i].textContent + ': ' + inputs[i].value;
+					}
+                    alert('Success! ' + json.msg + '\n' + dataSuccess);
+                }else{
+                    var errorsMsgs = '';
+                    for (var i = 0; i < json.errors.length; i++) {
+						errorsMsgs += '\n' + json.errors[i].msg;
+					}
+                    alert('Failed at submitting data, please check your inputs!\n' + errorsMsgs);
+                }
             })
+            .catch((reject) => alert(reject))
             document.getElementById('error-div').classList.add('error-div-hident');
             document.getElementById('error-div').classList.remove('error-div');
-            alert('Sign Up success!');
         }else{
             document.getElementById('error-div').classList.remove('error-div-hident');
             document.getElementById('error-div').classList.add('error-div');
-            alert('Error');
+            alert('Error: fill correctly all the fields before sending, they cannot be empty');
         }
     }
-    inputFirstName.addEventListener('blur', validateFirstName);
-    inputLastName.addEventListener('blur', validateLastName);
-    inputBirthday.addEventListener('blur', validateBirthday);
-    inputDni.addEventListener('blur', validateDni);
-    inputPhone.addEventListener('blur', validatePhone);
-    inputAddress.addEventListener('blur', validateAddress);
-    inputLocality.addEventListener('blur', validateLocality);
-    inputPostalCode.addEventListener('blur', validatePostalCode);
-    inputEmail.addEventListener('blur', validateEmail);
-    inputPwd.addEventListener('blur', validatePwd);
-    inputRePwd.addEventListener('blur', validateRePwd);
-    inputs.forEach((input) => {
-        input.addEventListener ('focus', cleanError)
-    })
-    form.addEventListener('submit', finalCheck);
+    //-------------Functions for save data in the local storage (modify)
+
+    /*function saveUserToLocalStorage(userData) {
+        localStorage.setItem('userData', JSON.stringify(userData));
+      }
+      function deleteUserLocalStorage() {
+        localStorage.removeItem('userData');
+      }
+      function getUserFromLocalStorage() {
+        return JSON.parse(localStorage.getItem('userData'));
+      }*/
 }

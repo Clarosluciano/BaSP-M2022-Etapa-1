@@ -107,7 +107,7 @@ window.onload = function(){
                 alert(res.msg);
             })
             .catch((error) => {
-                console.log(error.errors[0].msg);
+                console.log(error);
                 alert(error.errors[0].msg);
             })
             document.getElementById('error-div').classList.add('error-div-hident');

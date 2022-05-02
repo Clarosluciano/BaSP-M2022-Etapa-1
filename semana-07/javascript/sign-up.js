@@ -5,8 +5,6 @@ window.onload = function(){
     }
     var form = document.getElementById('form-sign-up');
     var inputs = document.querySelectorAll('#form-sign-up input')
-    var labels = document.querySelectorAll('#form-sign-up label');
-    var formChildren = document.querySelectorAll('.form-children')
     var inputFirstName = document.getElementById('firstName');
     var inputLastName = document.getElementById('lastName');
     var inputBirthday = document.getElementById('birthday');
@@ -18,22 +16,6 @@ window.onload = function(){
     var inputEmail = document.getElementById('email');
     var inputPwd = document.getElementById('pwd');
     var inputRePwd = document.getElementById('rePwd');
-    //-------------Event listener section
-    inputFirstName.addEventListener('blur', validateFirstName);
-    inputLastName.addEventListener('blur', validateLastName);
-    inputBirthday.addEventListener('blur', validateBirthday);
-    inputDni.addEventListener('blur', validateDni);
-    inputPhone.addEventListener('blur', validatePhone);
-    inputAddress.addEventListener('blur', validateAddress);
-    inputLocality.addEventListener('blur', validateLocality);
-    inputPostalCode.addEventListener('blur', validatePostalCode);
-    inputEmail.addEventListener('blur', validateEmail);
-    inputPwd.addEventListener('blur', validatePwd);
-    inputRePwd.addEventListener('blur', validateRePwd);
-    inputs.forEach((input) => {
-        input.addEventListener ('focus', cleanError)
-    })
-    form.addEventListener('submit', finalCheck);
     //-------------Validate functions section
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
@@ -195,7 +177,9 @@ window.onload = function(){
         }
     }
     var validateRePwd = function(){
-        if(inputRePwd.value.length > 8 && (lettersAndNums(inputRePwd.value))){
+        var inputPass1 = document.getElementById('pwd');
+        var inputPass2 = document.getElementById('rePwd');
+        if(!(inputPass1.value !== inputPass2.value)){
             return true;
         }else{
             document.getElementById('rePwd').classList.add('incorrect-input');
@@ -265,48 +249,85 @@ window.onload = function(){
         }
         return cleanError;
     }
-    //-------------Function whit the fetch method
+    //-------------Functions associated whit the fetch method
     var finalCheck = function(e){
         e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
-        var queryParams = `name=${inputFirstName.value}&lastName=${inputLastName.value}&dob=${formatDate(inputBirthday.value)}&dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAddress.value}&city=${inputLocality.value}&zip=${inputPostalCode.value}&email=${inputEmail.value}&password=${inputPwd.value}&rePwd=${inputRePwd.value}`;
+        var queryParams = `name=${inputFirstName.value}&lastName=${inputLastName.value}&dob=${formatDate(inputBirthday.value)}&dni=${inputDni.value}&phone=${inputPhone.value}&address=${inputAddress.value}&city=${inputLocality.value}&zip=${inputPostalCode.value}&email=${inputEmail.value}&password=${inputPwd.value}`;
         if(validateFirstName(e) && validateLastName(e) && validateBirthday(e) && validateDni(e) && validatePhone(e)
-         && validateAddress(e) && validateLocality(e) && validatePostalCode(e) && validateEmail(e) && validatePwd(e) && validateRePwd(e)){
+         && validateAddress(e) && validateLocality(e) && validatePostalCode(e) && validateEmail(e) && validatePwd(e) && validateRePwd()){
             fetch(`${url}${queryParams}`)
             .then((response) => response.json())
             .then((json) => {
                 if(json.success){
-                    var dataSuccess = '';
-                    for (var i = 0; i < formChildren.length-1; i++) {
-						dataSuccess += '\n' + labels[i].textContent + ': ' + inputs[i].value;
-					}
-                    alert('Success! ' + json.msg + '\n' + dataSuccess);
-                }else{
-                    var errorsMsgs = '';
-                    for (var i = 0; i < json.errors.length; i++) {
-						errorsMsgs += '\n' + json.errors[i].msg;
-					}
-                    alert('Failed at submitting data, please check your inputs!\n' + errorsMsgs);
+                    localSetUser();
+                    alert('Success! ' + json.msg +  responseData(json));
+                    console.log(responseData(json));
                 }
             })
             .catch((reject) => alert(reject))
-            document.getElementById('error-div').classList.add('error-div-hident');
-            document.getElementById('error-div').classList.remove('error-div');
         }else{
-            document.getElementById('error-div').classList.remove('error-div-hident');
-            document.getElementById('error-div').classList.add('error-div');
-            alert('Error: fill correctly all the fields before sending, they cannot be empty');
+            if(!validateRePwd()){
+                alert('Error: passwords do not match')
+            }else{
+                fetch(`${url}${queryParams}`)
+                .then((response) => response.json())
+                .then((json) => {
+                    if(!json.success){
+                        alert('Error: check the following fields:\n' + errorData(json))
+                    }
+                })
+                .catch((reject) => alert(reject))
+            }
         }
     }
-    //-------------Functions for save data in the local storage (modify)
-
-    /*function saveUserToLocalStorage(userData) {
-        localStorage.setItem('userData', JSON.stringify(userData));
-      }
-      function deleteUserLocalStorage() {
-        localStorage.removeItem('userData');
-      }
-      function getUserFromLocalStorage() {
-        return JSON.parse(localStorage.getItem('userData'));
-      }*/
+    function responseData(json) {
+        var successMsg = '';
+        var successData = Object.entries(json.data);
+        for (var i = 1; i < successData.length; i++) {
+            successMsg += '\n' + successData[i][0] + ': ' + successData[i][1];
+        }
+        return successMsg;
+    }
+    function errorData(json) {
+        var errorMsg = '';
+        var errorData = Object.entries(json.errors);
+        for (var i = 1; i < errorData.length; i++) {
+            errorMsg += '\n' + JSON.stringify(errorData[i][1].msg);
+        }
+        return errorMsg;
+    }
+    //-------------Functions for save data in the local storage
+    function localSetUser() {
+		for (var i = 0; i < inputs.length; i++) {
+			localStorage.setItem(inputs[i].name, inputs[i].value);
+		}
+	}
+	function localGetUser() {
+		for (var i = 0; i < inputs.length; i++) {
+			inputs[i].value = localStorage.getItem(inputs[i].name);
+			if (inputs[i].value) {
+				console.log(inputs[i].name + ': ' + inputs[i].value);
+			}else{
+                console.log('No entries in local storage');
+            }
+		}
+	}
+    localGetUser();
+    //-------------Event listener section
+    inputFirstName.addEventListener('blur', validateFirstName);
+    inputLastName.addEventListener('blur', validateLastName);
+    inputBirthday.addEventListener('blur', validateBirthday);
+    inputDni.addEventListener('blur', validateDni);
+    inputPhone.addEventListener('blur', validatePhone);
+    inputAddress.addEventListener('blur', validateAddress);
+    inputLocality.addEventListener('blur', validateLocality);
+    inputPostalCode.addEventListener('blur', validatePostalCode);
+    inputEmail.addEventListener('blur', validateEmail);
+    inputPwd.addEventListener('blur', validatePwd);
+    inputRePwd.addEventListener('blur', validateRePwd);
+    inputs.forEach((input) => {
+        input.addEventListener ('focus', cleanError)
+    })
+    form.addEventListener('submit', finalCheck);
 }

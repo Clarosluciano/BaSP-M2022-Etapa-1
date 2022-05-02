@@ -94,7 +94,7 @@ window.onload = function(){
         }
         return validateForm;
     }
-    var finalCheck = function(e){ //modificación de la semana 07
+    var finalCheck = function(e){ //07th week modification
         e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
         var queryParams = `email=${inputEmail.value}&password=${inputPwd.value}`;

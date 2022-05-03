@@ -1,5 +1,7 @@
 window.onload = function(){
+    //-------------Variables section
     var loginForm = document.getElementById('login-form');
+    var inputs = document.querySelectorAll('#login-form input')
     var inputEmail = document.querySelector('#email');
     var inputPwd = document.querySelector('#pwd');
     var close = document.querySelectorAll('.close')[0];
@@ -8,6 +10,7 @@ window.onload = function(){
     var expressions = {
         email: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
     }
+    //-------------Validate functions section
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
             var c = string.charAt(i);
@@ -61,6 +64,7 @@ window.onload = function(){
             return true;
         }
     }
+    //-------------Function that operates with the focus and blur event
     var cleanError = function(e){
         switch (e.target.name){
             case "email":
@@ -97,7 +101,8 @@ window.onload = function(){
         }
         return validateForm;
     }
-    var finalCheck = function(e){ //07th week modification
+    //-------------Function associated with the fetch method
+    var finalCheck = function(e){ 
         e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
         var queryParams = `email=${inputEmail.value}&password=${inputPwd.value}`;
@@ -105,16 +110,15 @@ window.onload = function(){
             validateForm(e);
             fetch(`${url}${queryParams}`)
             .then((response) => response.json())
-            .then((res) => {
-                console.log(res.msg);
-                alert(res.msg);
+            .then((json) => {
+                localSetUser();
+                showModal(`Success!`, 'modal-success', `${json.msg}`);
+                console.log(json.msg);
             })
             .catch((error) => {
+                showModal(`Error!`, 'modal-error', `${error.msg}`);
                 console.log(error);
-                alert(error.errors[0].msg);
             })
-            document.getElementById('error-div').classList.add('error-div-hident');
-            document.getElementById('error-div').classList.remove('error-div');
         }else{
             if(!validateEmail()){
                 document.getElementById('email').classList.add('incorrect-input');
@@ -140,6 +144,24 @@ window.onload = function(){
         var modalText = document.getElementById('text-modal').innerHTML = textData;
         document.getElementById('modal-content').classList.add(`${status}`);
     }
+    //-------------Functions for save data in the local storage
+    function localSetUser() {
+		for (var i = 0; i < inputs.length; i++) {
+			localStorage.setItem(inputs[i].name, inputs[i].value);
+		}
+	}
+	function localGetUser() {
+		for (var i = 0; i < inputs.length; i++) {
+			inputs[i].value = localStorage.getItem(inputs[i].name);
+			if (inputs[i].value) {
+				console.log(inputs[i].name + ': ' + inputs[i].value);
+			}else{
+                console.log('No entries in local storage');
+            }
+		}
+	}
+    localGetUser();
+    //-------------Event listener section
     inputEmail.addEventListener('blur', validateForm);
     inputEmail.addEventListener('focus', cleanError);
     inputPwd.addEventListener('blur', validateForm);

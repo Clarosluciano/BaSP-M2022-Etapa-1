@@ -252,7 +252,7 @@ window.onload = function(){
         }
         return cleanError;
     }
-    //-------------Functions associated whit the fetch method
+    //-------------Functions associated with the fetch method
     var finalCheck = function(e){
         e.preventDefault();
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';

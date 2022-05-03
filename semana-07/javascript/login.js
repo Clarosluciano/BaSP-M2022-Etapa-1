@@ -2,6 +2,9 @@ window.onload = function(){
     var loginForm = document.getElementById('login-form');
     var inputEmail = document.querySelector('#email');
     var inputPwd = document.querySelector('#pwd');
+    var close = document.querySelectorAll('.close')[0];
+    var modal = document.querySelectorAll('.modal')[0];
+    var modalContainer = document.querySelectorAll('.modal-container')[0];
     var expressions = {
         email: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
     }
@@ -117,24 +120,36 @@ window.onload = function(){
                 document.getElementById('email').classList.add('incorrect-input');
                 document.getElementById('error-email-hide').classList.remove('error-text-hident');
                 document.getElementById('error-email-hide').classList.add('error-text');
-                document.getElementById('error-div').classList.remove('error-div-hident');
-                document.getElementById('error-div').classList.add('error-div');
-                alert('Error: check the following fields');
+                showModal('Something went wrong, check the fields', 'modal-error', 'Email or password invalid');
             }
             if(!validatePwd()){
                 document.getElementById('error-pwd-hide').classList.remove('error-text-hident');
                 document.getElementById('error-pwd-hide').classList.add('error-text');
                 document.getElementById('pwd').classList.add('incorrect-input');
-                document.getElementById('error-div').classList.remove('error-div-hident');
-                document.getElementById('error-div').classList.add('error-div');
-                alert('Error: check the following fields');
+                showModal('Something went wrong, check the fields', 'modal-error', 'Email or password invalid');
             }
             
         }
+    }
+    //-------------Modal function
+    function showModal(titleTextModal, status, textData){
+        modalContainer.style.opacity = '1';
+        modalContainer.style.visibility = 'visible';
+        modal.classList.toggle('modal-close');
+        var titleModal = document.getElementById('title-modal').innerHTML = titleTextModal;
+        var modalText = document.getElementById('text-modal').innerHTML = textData;
+        document.getElementById('modal-content').classList.add(`${status}`);
     }
     inputEmail.addEventListener('blur', validateForm);
     inputEmail.addEventListener('focus', cleanError);
     inputPwd.addEventListener('blur', validateForm);
     inputPwd.addEventListener('focus', cleanError);
+    close.addEventListener('click', function(){
+        modal.classList.toggle('modal-close');
+        setTimeout(function(){
+            modalContainer.style.opacity = '0';
+            modalContainer.style.visibility = 'hidden';
+        }, 800)
+    });
     loginForm.addEventListener('submit', finalCheck);
 }

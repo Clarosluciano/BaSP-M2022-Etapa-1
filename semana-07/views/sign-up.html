@@ -40,69 +40,79 @@
                 <div class="border-container">
                     <h2 class="h2">Sign Up!</h2>
                     <form id="form-sign-up" class="sign-up-form">
-                        <div class="form-children">
-                            <label class="label" for="first-name">First name</label>
-                            <input class="input" type="text" name="firstName" placeholder="Click on me to write" id="firstName">
-                            <p id="error-first-name-hide" class="error-text-hident">Only letters and must have more than 3 letters</p>
+                        <div class="boxes">
+                            <div class="form-children">
+                                <label class="label" for="first-name">First name</label>
+                                <input class="input" type="text" name="firstName" placeholder="Click on me to write" id="firstName">
+                                <p id="error-first-name-hide" class="error-text-hident">Only letters and must have more than 3 letters</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="last-name">Last name</label>
+                                <input class="input" type="text" name="lastName" placeholder="Click on me to write" id="lastName">
+                                <p id="error-last-name-hide" class="error-text-hident">Only letters and must have more than 3 letters</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="birthday">Birthday</label>
+                                <input class="input" type="date" name="birthday" id="birthday">
+                                <p id="error-birthday-hide" class="error-text-hident">Enter a valid date</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="dni">DNI Nº</label>
+                                <input class="input" type="text" name="dni" placeholder="Click on me to write" id="dni">
+                                <p id="error-dni-hide" class="error-text-hident">Only numbers and must have more than 7 numbers</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="phone">Phone number</label>
+                                <input class="input" type="tel" name="phone" placeholder="Ej: 0(341)777-7777" id="phone">
+                                <p id="error-phone-hide" class="error-text-hident">Only numbers and must have 10 numbers</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="address">Address</label>
+                                <input class="input" type="text" name="address" placeholder="Click on me to write" id="address">
+                                <p id="error-address-hide" class="error-text-hident">Need 5 characters long with letters, numbers and a space</p>
+                            </div>
                         </div>
-                        <div class="form-children">
-                            <label class="label" for="last-name">Last name</label>
-                            <input class="input" type="text" name="lastName" placeholder="Click on me to write" id="lastName">
-                            <p id="error-last-name-hide" class="error-text-hident">Only letters and must have more than 3 letters</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="birthday">Birthday</label>
-                            <input class="input" type="date" name="birthday" id="birthday">
-                            <p id="error-birthday-hide" class="error-text-hident">Enter a valid date</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="dni">DNI Nº</label>
-                            <input class="input" type="text" name="dni" placeholder="Click on me to write" id="dni">
-                            <p id="error-dni-hide" class="error-text-hident">Only numbers and must have more than 7 numbers</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="phone">Phone number</label>
-                            <input class="input" type="tel" name="phone" placeholder="Ej: 0(341)777-7777" id="phone">
-                            <p id="error-phone-hide" class="error-text-hident">Only numbers and must have 10 numbers</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="address">Address</label>
-                            <input class="input" type="text" name="address" placeholder="Click on me to write" id="address">
-                            <p id="error-address-hide" class="error-text-hident">Need 5 characters long with letters, numbers and a space</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="locality">Locality</label>
-                            <input class="input" type="text" name="locality" placeholder="Click on me to write" id="locality">
-                            <p id="error-locality-hide" class="error-text-hident">Must be alphanumeric text and must have more than 3 letters</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="postal-code">Postal Code</label>
-                            <input class="input" type="text" name="postalCode" placeholder="Click on me to write" id="postalCode">
-                            <p id="error-postal-code-hide" class="error-text-hident">Only numbers and must have between 4 and 5 numbers</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="email">Email</label>
-                            <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
-                            <p id="error-email-hide" class="error-text-hident">It must have a valid email format</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="pwd">Password</label>
-                            <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
-                            <p id="error-pwd-hide" class="error-text-hident">At least 8 characters, made up of letters and numbers</p>
-                        </div>
-                        <div class="form-children">
-                            <label class="label" for="re-pwd">Repeat password</label>
-                            <input class="input" type="password" name="rePwd" placeholder="Click on me to write" id="rePwd">
-                            <p id="error-re-pwd-hide" class="error-text-hident">Passwords do not match</p>
+                        <div class="boxes">
+                            <div class="form-children">
+                                <label class="label" for="locality">Locality</label>
+                                <input class="input" type="text" name="locality" placeholder="Click on me to write" id="locality">
+                                <p id="error-locality-hide" class="error-text-hident">Must be alphanumeric text and must have more than 3 letters</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="postal-code">Postal Code</label>
+                                <input class="input" type="text" name="postalCode" placeholder="Click on me to write" id="postalCode">
+                                <p id="error-postal-code-hide" class="error-text-hident">Only numbers and must have between 4 and 5 numbers</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="email">Email</label>
+                                <input class="input" type="email" name="email" placeholder="Click on me to write" id="email">
+                                <p id="error-email-hide" class="error-text-hident">It must have a valid email format</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="pwd">Password</label>
+                                <input class="input" type="password" name="pwd" placeholder="Click on me to write" id="pwd">
+                                <p id="error-pwd-hide" class="error-text-hident">At least 8 characters, made up of letters and numbers</p>
+                            </div>
+                            <div class="form-children">
+                                <label class="label" for="re-pwd">Repeat password</label>
+                                <input class="input" type="password" name="rePwd" placeholder="Click on me to write" id="rePwd">
+                                <p id="error-re-pwd-hide" class="error-text-hident">Passwords do not match</p>
+                            </div>
                         </div>
                     </form>
-                </div>
-                <div id="error-div" class="error-div-hident">
-                    <p class="submit-error">The filled fields are invalid</p>
                 </div>
                 <div class="buttons">
                     <button id="send" class="trackgenix-button-green" type="submit" value="Submit" form="form-sign-up">CREATE ACCOUNT</button>
                     <button class="trackgenix-button-white" type="reset">Cancel</button>
+                </div>
+                <div id="modal-container" class="modal-container">
+                    <div id="modal-content" class="modal modal-close">
+                        <p class="close">X</p>
+                        <div class="modal-texts">
+                            <h2 id='title-modal' class="submit-msg"></h2>
+                            <p id="text-modal"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

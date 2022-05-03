@@ -16,6 +16,9 @@ window.onload = function(){
     var inputEmail = document.getElementById('email');
     var inputPwd = document.getElementById('pwd');
     var inputRePwd = document.getElementById('rePwd');
+    var close = document.querySelectorAll('.close')[0];
+    var modal = document.querySelectorAll('.modal')[0];
+    var modalContainer = document.querySelectorAll('.modal-container')[0];
     //-------------Validate functions section
     function onlyLetters(string) {
         for (var i = 0; i < string.length; i++) {
@@ -261,20 +264,20 @@ window.onload = function(){
             .then((json) => {
                 if(json.success){
                     localSetUser();
-                    alert('Success! ' + json.msg +  responseData(json));
+                    showModal(`Success! ${json.msg}`, 'modal-success', responseData(json));
                     console.log(responseData(json));
                 }
             })
             .catch((reject) => alert(reject))
         }else{
             if(!validateRePwd()){
-                alert('Error: passwords do not match')
+                showModal('Something went wrong, check the fields', 'modal-error', 'Passwords do not match');
             }else{
                 fetch(`${url}${queryParams}`)
                 .then((response) => response.json())
                 .then((json) => {
                     if(!json.success){
-                        alert('Error: check the following fields:\n' + errorData(json))
+                        showModal('Something went wrong, check the fields', 'modal-error', errorData(json));
                     }
                 })
                 .catch((reject) => alert(reject))
@@ -285,7 +288,7 @@ window.onload = function(){
         var successMsg = '';
         var successData = Object.entries(json.data);
         for (var i = 1; i < successData.length; i++) {
-            successMsg += '\n' + successData[i][0] + ': ' + successData[i][1];
+            successMsg += '\n' + `<p>${successData[i][0]}: ${successData[i][1]}</p>`;
         }
         return successMsg;
     }
@@ -293,9 +296,18 @@ window.onload = function(){
         var errorMsg = '';
         var errorData = Object.entries(json.errors);
         for (var i = 1; i < errorData.length; i++) {
-            errorMsg += '\n' + JSON.stringify(errorData[i][1].msg);
+            errorMsg += '\n' + `<p>${JSON.stringify(errorData[i][1].msg)}</p>`;
         }
         return errorMsg;
+    }
+    //-------------Modal function
+    function showModal(titleTextModal, status, textData){
+        modalContainer.style.opacity = '1';
+        modalContainer.style.visibility = 'visible';
+        modal.classList.toggle('modal-close');
+        var titleModal = document.getElementById('title-modal').innerHTML = titleTextModal;
+        var modalText = document.getElementById('text-modal').innerHTML = textData;
+        document.getElementById('modal-content').classList.add(`${status}`);
     }
     //-------------Functions for save data in the local storage
     function localSetUser() {
@@ -327,7 +339,14 @@ window.onload = function(){
     inputPwd.addEventListener('blur', validatePwd);
     inputRePwd.addEventListener('blur', validateRePwd);
     inputs.forEach((input) => {
-        input.addEventListener ('focus', cleanError)
-    })
+        input.addEventListener ('focus', cleanError);
+    });
+    close.addEventListener('click', function(){
+        modal.classList.toggle('modal-close');
+        setTimeout(function(){
+            modalContainer.style.opacity = '0';
+            modalContainer.style.visibility = 'hidden';
+        }, 800)
+    });
     form.addEventListener('submit', finalCheck);
 }
